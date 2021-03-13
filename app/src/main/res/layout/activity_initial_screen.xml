@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+<LinearLayout
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<include layout="@layout/simpletitlelayout"
+		android:id="@+id/titleLayout"/>
+
+	<ScrollView
+		android:id="@+id/scrollView1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="@dimen/_10sdp"
+			android:orientation="vertical" >
+
+			<!-- Billing Address Start -->
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Address:"
+				android:textColor="@color/colorBlack"
+				android:textSize="@dimen/_12sdp"
+				android:textStyle="bold"/>
+
+			<EditText
+				android:id="@+id/billingName"
+				android:layout_height="@dimen/_35sdp"
+				android:layout_width="match_parent"
+				android:paddingLeft="@dimen/_5sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:background="@drawable/edittext_border"
+				android:backgroundTint="@color/selectorGrey"
+				android:textSize="@dimen/_10sdp"
+				android:singleLine="true"
+                android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:inputType="textFilter|textCapSentences"
+                android:maxLength="30"
+				android:hint="Full Name"
+				/>
+
+			<EditText
+				android:id="@+id/billingTel"
+				android:layout_height="@dimen/_35sdp"
+				android:layout_width="match_parent"
+				android:paddingLeft="@dimen/_5sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:background="@drawable/edittext_border"
+				android:backgroundTint="@color/selectorGrey"
+				android:textSize="@dimen/_10sdp"
+				android:digits="1234567890"
+				android:inputType="textFilter|phone"
+				android:singleLine="true"
+				android:maxLength="10"
+				android:hint="Phone Number"
+				android:text=""
+				/>
+
+
+			<EditText
+				android:id="@+id/billingEmail"
+				android:layout_height="@dimen/_35sdp"
+				android:layout_width="match_parent"
+				android:paddingLeft="@dimen/_5sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:background="@drawable/edittext_border"
+				android:backgroundTint="@color/selectorGrey"
+				android:textSize="@dimen/_10sdp"
+				android:singleLine="true"
+				android:hint="Email"
+				android:inputType="textEmailAddress"
+				android:maxLength="50"
+				android:text=""
+				/>
+
+			<EditText
+				android:id="@+id/billingAddress"
+				android:layout_height="@dimen/_35sdp"
+				android:layout_width="match_parent"
+				android:paddingLeft="@dimen/_5sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:background="@drawable/edittext_border"
+				android:backgroundTint="@color/selectorGrey"
+				android:textSize="@dimen/_10sdp"
+				android:singleLine="true"
+				android:hint="Address"
+                android:maxLength="35"
+				android:inputType="textPostalAddress"
+				/>
+
+
+			<RelativeLayout
+				android:id="@+id/checkoutCountryBtn"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/_35sdp"
+				android:background="@drawable/edittext_border"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:backgroundTint="@color/selectorGrey">
+
+				<TextView
+					android:id="@+id/checkoutCountryTxt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:hint="-Select Country-"
+					android:textColor="@color/colorBlack"
+					android:textSize="@dimen/_10sdp"
+					android:layout_marginLeft="@dimen/_5sdp"
+					android:layout_centerVertical="true" />
+
+				<ImageView
+					android:layout_width="@dimen/_30sdp"
+					android:layout_height="@dimen/_30sdp"
+					android:singleLine="true"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:padding="@dimen/_5sdp"
+					android:layout_marginRight="@dimen/_5sdp"
+					android:src="@drawable/ic_arrow_drop_down_black_24dp"
+					android:gravity="center_vertical"
+					app:tint="#737373" />
+
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:id="@+id/checkoutStateBtn"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/_35sdp"
+				android:background="@drawable/edittext_border"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:backgroundTint="@color/selectorGrey">
+
+				<TextView
+					android:id="@+id/checkoutStateTxt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:hint="-Select State-"
+					android:textColor="@color/colorBlack"
+					android:textSize="@dimen/_10sdp"
+					android:layout_marginLeft="@dimen/_5sdp"
+					android:layout_centerVertical="true" />
+
+				<ImageView
+					android:layout_width="@dimen/_30sdp"
+					android:layout_height="@dimen/_30sdp"
+					android:singleLine="true"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:padding="@dimen/_5sdp"
+					android:layout_marginRight="@dimen/_5sdp"
+					android:src="@drawable/ic_arrow_drop_down_black_24dp"
+					android:gravity="center_vertical"
+					app:tint="#737373" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/checkoutCityBtn"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/_35sdp"
+				android:background="@drawable/edittext_border"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:backgroundTint="@color/selectorGrey">
+
+				<TextView
+					android:id="@+id/checkoutcityTxt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:hint="-Select City-"
+					android:textColor="@color/colorBlack"
+					android:textSize="@dimen/_10sdp"
+					android:layout_marginLeft="@dimen/_5sdp"
+					android:layout_centerVertical="true" />
+
+				<ImageView
+					android:layout_width="@dimen/_30sdp"
+					android:layout_height="@dimen/_30sdp"
+					android:singleLine="true"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:padding="@dimen/_5sdp"
+					android:layout_marginRight="@dimen/_5sdp"
+					android:src="@drawable/ic_arrow_drop_down_black_24dp"
+					android:gravity="center_vertical"
+					app:tint="#737373" />
+
+			</RelativeLayout>
+
+			<EditText
+				android:id="@+id/billingZip"
+				android:layout_height="@dimen/_35sdp"
+				android:layout_width="match_parent"
+				android:paddingLeft="@dimen/_5sdp"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:background="@drawable/edittext_border"
+				android:backgroundTint="@color/selectorGrey"
+				android:textSize="@dimen/_10sdp"
+				android:singleLine="true"
+				android:hint="Zip Code"
+                android:digits="1234567890"
+                android:inputType="textFilter|number"
+                android:maxLength="20"
+				android:text=""
+				/>
+
+			<!-- Billing Address End -->
+
+            <Button
+                android:id="@+id/checkoutButton"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:gravity="center"
+                android:textSize="@dimen/_10sdp"
+				android:background="@color/appColor"
+                android:textColor="@color/colorWhite"
+                android:text="Checkout" />
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>
+
+	<com.github.ybq.android.spinkit.SpinKitView
+		android:id="@+id/aviProgressBar"
+		style="@style/SpinKitView.RotatingPlane"
+		android:visibility="gone"
+		android:layout_centerInParent="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		app:SpinKit_Color="@color/appColor" />
+	</RelativeLayout>
+</layout>

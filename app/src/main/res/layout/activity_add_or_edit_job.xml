@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="jobsBinder"
+            type="com.dazzlerr_usa.views.activities.jobsdetails.JobDetailsPojo.DataBean" />
+    </data>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.addjob.AddOrEditJobActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/submitBtn">
+
+            <include layout="@layout/simpletitlelayout"
+                android:id="@+id/titleLayout"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post A Job"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Title*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                    android:inputType="textFilter|textCapSentences"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:hint="Title"
+                    android:maxLength="70"
+                    android:text="@{jobsBinder.title}"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category*"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobCategoryBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:backgroundTint="@color/selectorGrey">
+
+                        <TextView
+                            android:id="@+id/jobCategoryTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="-Select-"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            app:tint="#737373" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Description*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:textSize="@dimen/_10sdp"
+                    android:lines="8"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="start"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:text="@{jobsBinder.description}"
+                    android:maxLength="300"
+                    android:hint="Description"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(Please don't write your contact number, email or any social media detail)"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="@dimen/_9sdp"/>
+
+                <TextView
+                    android:id="@+id/characterLeftTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Characters left: 300"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_3sdp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <RadioButton
+                        android:id="@+id/jobMaleRadiobtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male   "
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+                    <RadioButton
+                        android:id="@+id/jobFemaleRadiobtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age Range*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_4sdp">
+
+                        <EditText
+                            android:id="@+id/JobMinAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/edittext_border"
+                            android:backgroundTint="@color/selectorGrey"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textSize="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:inputType="phone"
+                            android:maxLength="2"
+                            android:textColor="@color/colorBlack"
+                            android:hint="Min - Age(in yrs)"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_4sdp">
+
+                        <EditText
+                            android:id="@+id/JobMaxAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/edittext_border"
+                            android:backgroundTint="@color/selectorGrey"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textSize="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:maxLength="2"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/colorBlack"
+                            android:hint="Max - Age(in yrs)"
+                            android:inputType="phone"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Person name*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobContactPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="textCapSentences"
+                    android:maxLength="50"
+                    android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                    android:text="@{jobsBinder.contact_person}"
+                    android:hint="Name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Email*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="70"
+                    android:text="@{jobsBinder.email}"
+                    android:hint="Email"/>
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Phone*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:digits="1234567890"
+                    android:inputType="textFilter|phone"
+                    android:maxLength="10"
+                    android:text="@{jobsBinder.contact_mobile}"
+                    android:hint="Phone number"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Whatsapp*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobWhatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:digits="1234567890"
+                    android:inputType="textFilter|phone"
+                    android:maxLength="10"
+                    android:text="@{jobsBinder.contact_whatsapp}"
+                    android:hint="Whatsapp number"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Country*"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobCountryBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:backgroundTint="@color/selectorGrey">
+
+                        <TextView
+                            android:id="@+id/jobCountryTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="-Select-"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            app:tint="#737373" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="State*"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobStateBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:backgroundTint="@color/selectorGrey">
+
+                        <TextView
+                            android:id="@+id/jobStateTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="-Select-"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            app:tint="#737373" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City*"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobCityBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:backgroundTint="@color/selectorGrey">
+
+                        <TextView
+                            android:id="@+id/jobCityTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="-Select-"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_centerVertical="true" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            app:tint="#737373" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Location*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="textCapSentences"
+                    android:text="@{jobsBinder.address}"
+                    android:maxLength="70"
+                    android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890#"
+                    android:hint="Location"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_4sdp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Job Start Date*"
+                            android:textAllCaps="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/appColor"/>
+
+                        <TextView
+                            android:id="@+id/jobStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/edittext_border"
+                            android:backgroundTint="@color/selectorGrey"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textSize="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/colorBlack"
+                            android:text="@{jobsBinder.start_date}"
+                            android:hint="Select job start date"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_4sdp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Job End Date*"
+                            android:textAllCaps="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/appColor"/>
+
+                        <TextView
+                            android:id="@+id/jobEndDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/edittext_border"
+                            android:backgroundTint="@color/selectorGrey"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textSize="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/colorBlack"
+                            android:hint="Select job end date"
+                            android:text="@{jobsBinder.end_date}"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Expiry Date"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <TextView
+                    android:id="@+id/jobExpiryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:hint="Select job expiry date"
+                    android:text="@{jobsBinder.job_expiry}"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Audition Required"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <RadioButton
+                        android:id="@+id/jobIsAuditionRequiredNoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes   "
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+                    <RadioButton
+                        android:id="@+id/jobIsAuditionRequiredYesBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. of vacancies*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobVacancies"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:text="@{jobsBinder.vacancies}"
+                    android:hint="E.g 4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Budget*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/jobBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:maxLength="15"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="number"
+                    android:hint="E.g 1000"
+                    android:text="@{jobsBinder.budget}"/>
+
+
+                <CheckBox
+                    android:id="@+id/budgetCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="As Per Profile"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorLightGrey1"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tags*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/jobsTagsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey">
+
+                    <EditText
+                        android:id="@+id/jobsTagsEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/_3sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:maxLength="70"
+                        android:inputType="textCapSentences"
+                        android:hint="Enter your tag here"/>
+
+                    <Button
+                        android:id="@+id/jobsAddTagsBtn"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/appColor"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="Add"
+                        android:textColor="@color/colorWhite"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Budget Duration*"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <RadioButton
+                        android:id="@+id/jobDurationPerdayBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Per Day"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+                    <RadioButton
+                        android:id="@+id/jobDurationPerweekBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Per Week"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+
+                    <RadioButton
+                        android:id="@+id/jobDurationPermonthBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Per Month"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+
+                    <RadioButton
+                        android:id="@+id/jobDurationOnetimeBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="One Time"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorLightGrey1"
+                        android:buttonTint="@color/appColor"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/aviProgressBar"
+        style="@style/SpinKitView.RotatingPlane"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/appColor" />
+
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Submit"
+        android:background="@color/appColor"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/_10sdp"/>
+
+</RelativeLayout>
+</layout>

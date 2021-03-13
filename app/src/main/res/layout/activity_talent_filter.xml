@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:layout_above="@+id/applyFiltersBtn">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/appColor"
+        android:gravity="center_vertical"
+        android:id="@+id/title_layout"
+        android:layout_height="@dimen/_40sdp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back_white_32dp"
+            android:backgroundTint="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/backBtn"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            android:text="FILTERS"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:paddingRight="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/resetFilterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:textSize="@dimen/_11sdp"
+                android:text="Reset Filters"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            />
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/citiesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            app:smsp_errorText="Error while finding cities."
+            app:smsp_floatingLabelText="Floating Label Text"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:smsp_hint="Select city"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            app:smsp_searchHeaderBackgroundColor="@color/appColor"
+            app:smsp_hintColor="@color/colorBlack"
+            app:smsp_itemColor="@color/colorDarkGrey"
+            app:smsp_itemListColor="@color/colorBlack"
+            app:smsp_itemListHintBackgroundColor="#808080"
+            app:smsp_itemListHintColor="#FFFFFF"
+            app:smsp_multilineError="false"
+            app:smsp_searchHeaderText=""
+            android:theme="@style/AppTheme"
+            app:smsp_enableErrorLabel="false"
+            app:smsp_enableFloatingLabel="false"
+            app:smsp_selectedItemListColor="@color/appColor"
+            app:smsp_underlineSize="0.2dp"
+            app:smsp_underlineColor="@color/colorBlack"
+            app:smsp_isSearchable = "true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Role"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:textColor="@color/colorBlack"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filterCategoryRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/experienceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience level"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/filter_exp_lvl_novice"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Novice"
+                android:textSize="@dimen/_11sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                />
+
+            <CheckBox
+                android:id="@+id/filter_exp_lvl_experienced"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Experienced"
+                android:textSize="@dimen/_11sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                />
+
+        </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/filter_exp_lvl_professional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Professional"
+                android:textSize="@dimen/_11sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/genderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <CheckBox
+                android:id="@+id/filter_gender_male"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Male    "
+                android:textSize="@dimen/_11sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                />
+
+            <CheckBox
+                android:id="@+id/filter_gender_female"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="@dimen/_11sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                />
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filterAgeHeightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+
+        <io.apptik.widget.MultiSlider
+            android:id="@+id/age_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:thumbNumber="2"
+            app:range1Color="@color/appColor"
+            app:range2Color="@color/appColor"
+            app:thumbColor="@color/appColor"
+            app:rangeColor="@color/appColor"
+            app:trackColor="@color/selectorGrey"
+            app:drawThumbsApart="true"
+            app:scaleMin="5"
+            app:scaleMax="80"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/filterMinimumAgeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Min. 5 Yrs"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/filterMaximumAgeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Max. 80 Yrs"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorBlack"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+
+            <io.apptik.widget.MultiSlider
+                android:id="@+id/height_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:thumbNumber="2"
+                app:range1Color="@color/appColor"
+                app:range2Color="@color/appColor"
+                app:thumbColor="@color/appColor"
+                app:rangeColor="@color/appColor"
+                app:trackColor="@color/selectorGrey"
+                app:drawThumbsApart="true"
+                app:scaleMin="4"
+                app:scaleMax="7"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/filterMinimumHeightTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Min. 4 Feet"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/filterMaximumHeightTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Max. 7 Feet"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorBlack"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/colorBlack"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <LinearLayout
+                android:id="@+id/filter_rating_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:background="@color/appColor"
+                android:gravity="center">
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:progressTint="@color/colorWhite"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:text="Both"
+                    android:textColor="@color/colorWhite"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filter_rating_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/edittext_border"
+                android:gravity="center">
+
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:progressTint="@color/colorDarkGrey"
+                    android:numStars="4"
+                    android:rating="5"
+                    android:text="Both"
+                    android:textColor="@color/colorWhite"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filter_rating_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/edittext_border"
+                android:gravity="center">
+
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:progressTint="@color/colorDarkGrey"
+                    android:numStars="3"
+                    android:rating="5"
+                    android:text="Both"
+                    android:textColor="@color/colorWhite"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filter_rating_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/edittext_border"
+                android:gravity="center">
+
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:progressTint="@color/colorDarkGrey"
+                    android:numStars="3"
+                    android:rating="5"
+                    android:text="Both"
+                    android:textColor="@color/colorWhite"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filter_rating_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/edittext_border"
+                android:gravity="center">
+
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:progressTint="@color/colorDarkGrey"
+                    android:numStars="1"
+                    android:rating="5"
+                    android:text="Both"
+                    android:textColor="@color/colorWhite"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+
+        <Button
+            android:id="@+id/applyFiltersBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:text="Apply Filters"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sdp"
+            android:background="@color/appColor"
+            android:paddingTop="@dimen/_2sdp"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/_2sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textAllCaps="false"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+    </RelativeLayout>
+</layout>

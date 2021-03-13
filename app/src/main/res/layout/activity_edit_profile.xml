@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="binderObj"
+            type="com.dazzlerr_usa.views.activities.editprofile.pojos.ProfileStatsPojo" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".views.activities.OthersProfileActivity">
+
+            <include
+                layout="@layout/simpletitlelayout"
+                android:id="@+id/titleLayout"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:background="#f1ecf3">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Profile Completeness"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    app:setProgressTextColor1="@{binderObj.total}"
+                    android:text="@{``+binderObj.total+`%`}"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_21sdp"
+                    android:layout_height="@dimen/_21sdp"
+                    app:setTotalProgressColor1="@{binderObj.total}"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_8sdp">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressView1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            setProgress="@{binderObj.total}"
+            android:visibility="visible"
+            android:max="100"
+            app:setProfileStatsIcon="@{binderObj.total &lt; 60  ? @drawable/red_progressbar_drawable : (binderObj.total &lt; 80  ? @drawable/yellow_progressbar_drawable : @drawable/green_progressbar_drawable)}"
+            />
+
+<!--            android:progressDrawable ="@drawable/red_progressbar_drawable"-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/editProfilePicBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/edittextbottomborder">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:src="@drawable/ic_profile"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/appColor" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Profile Image"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:setProgressTextColor="@{binderObj.profilepic}"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_11sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    app:setTotalProgressIconColor="@{binderObj.profilepic}"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_left_arrow"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
+                android:rotation="180"
+                app:tint="@color/colorLightGrey" />
+        </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/editGeneralInformationBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/edittextbottomborder">
+
+                        <ImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:src="@drawable/ic_generalinfo_icon"
+                            android:layout_gravity="center_vertical"
+                            app:tint="@color/appColor" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="General Information"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/_11sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:setProgressTextColor="@{binderObj.general}"
+                                android:gravity="center_vertical"
+                                android:textSize="@dimen/_11sdp"/>
+
+                            <ImageView
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                app:setTotalProgressIconColor="@{binderObj.general}"
+                                android:scaleType="fitXY"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/_5sdp"/>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_left_arrow"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center_vertical"
+                            android:rotation="180"
+                            app:tint="@color/colorLightGrey" />
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/editAppearanceBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/edittextbottomborder">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/ic_appearance_icon"
+                        android:layout_gravity="center_vertical"
+                        app:tint="@color/appColor" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Appearance"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_11sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:setProgressTextColor="@{binderObj.appearance}"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/_11sdp"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            app:setTotalProgressIconColor="@{binderObj.appearance}"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_left_arrow"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:rotation="180"
+                        app:tint="@color/colorLightGrey" />
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/editRatesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+                <ImageView
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:src="@drawable/ratestravel"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/appColor" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Rates &amp; Travel"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:textColor="@color/colorBlack"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:setProgressTextColor="@{binderObj.ratetravel}"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_11sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        app:setTotalProgressIconColor="@{binderObj.ratetravel}"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editServicesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_services"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/appColor" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Services"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:setProgressTextColor="@{binderObj.services}"
+                        android:textColor="@color/profileTextColor"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_11sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        app:setTotalProgressIconColor="@{binderObj.services}"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editImagesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_edit_photos"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/appColor" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Images"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Min. 8 images are required"
+                        android:textColor="@color/colorLightGrey"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_10sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:setProgressTextColor="@{binderObj.portfolio}"
+                        android:textColor="@color/profileTextColor"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_11sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        app:setTotalProgressIconColor="@{binderObj.portfolio}"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editVideosBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_edit_video"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/appColor" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Videos"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:setProgressTextColor="@{binderObj.video}"
+                        android:textColor="@color/profileTextColor"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_11sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        app:setTotalProgressIconColor="@{binderObj.video}"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editAudiosBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_music_note"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/appColor" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Audios"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:setProgressTextColor="@{binderObj.audio}"
+                        android:textColor="@color/profileTextColor"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_11sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        app:setTotalProgressIconColor="@{binderObj.audio}"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editProjectsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_edit_projects"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/appColor" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="Projects"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:setProgressTextColor="@{binderObj.project}"
+                        android:textColor="@color/profileTextColor"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_11sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        app:setTotalProgressIconColor="@{binderObj.project}"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editTeamBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_teams"
+                    android:layout_gravity="center_vertical"
+                    app:tint="@color/appColor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="My Team"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/editProductBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edittextbottomborder">
+
+                <ImageView
+                    android:id="@+id/editProductImage"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_equipment_we_use"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/editProductTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Equipments We Use"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:setProgressTextColor="@{binderObj.equipments}"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/_11sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        app:setTotalProgressIconColor="@{binderObj.equipments}"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="180"
+                    app:tint="@color/colorLightGrey" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/editSecurityQuestionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/edittextbottomborder">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_generalinfo_icon"
+                android:layout_gravity="center_vertical"
+                app:tint="@color/appColor" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Security Question"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:setProgressTextColor="@{binderObj.security}"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_11sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    app:setTotalProgressIconColor="@{binderObj.security}"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_left_arrow"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
+                android:rotation="180"
+                app:tint="@color/colorLightGrey" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+        </LinearLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+    </RelativeLayout>
+</layout>

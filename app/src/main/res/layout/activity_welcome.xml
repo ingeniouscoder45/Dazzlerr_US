@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".views.activities.WelcomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_45sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:gravity="center_horizontal"
+      android:paddingTop="@dimen/_40sdp"
+      android:paddingBottom="@dimen/_40sdp"
+      android:background="@color/appColor">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+          <ImageView
+              android:id="@+id/logoIcon"
+              android:layout_width="@dimen/_30sdp"
+              android:layout_height="@dimen/_37sdp"
+              android:background="@drawable/ic_dazzlerr"
+              android:layout_marginTop="@dimen/_5sdp"
+              android:backgroundTint="@color/colorWhite"
+              />
+
+
+          <LinearLayout
+              android:id="@+id/logocontainer"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_gravity="center"
+              android:gravity="center_horizontal">
+
+              <ImageView
+                  android:id="@+id/titleTxt"
+                  android:layout_width="@dimen/_90sdp"
+                  android:layout_height="@dimen/_20sdp"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:src="@drawable/ic_dazzlerr_title_1"
+                  />
+
+              <ImageView
+                  android:id="@+id/taglineTxt"
+                  android:layout_width="@dimen/_80sdp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:src="@drawable/ic_dazzlerr_title_2"
+                  />
+          </LinearLayout>
+      </LinearLayout>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Welcome to"
+          android:textSize="@dimen/_14sdp"
+          android:gravity="center_vertical"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="@dimen/_40sdp"
+          android:textColor="@color/colorWhite"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Dazzlerr Family!"
+          android:textSize="@dimen/_19sdp"
+          android:textStyle="bold"
+          android:gravity="center_vertical"
+          android:layout_gravity="center_horizontal"
+          android:textColor="@color/colorWhite"/>
+
+  </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:text="Congrats, You have successfully registered!"
+            android:gravity="start"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/appColor"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A beautiful portfolio is a key to success. It will give wings to your career in the fashion and entertainment world.\n\nIt is highly recommended to add information about you in all tabs like : General Information / Appearance / Images / Travel &amp; Rates etc to get better attention by Casting Directors or Productions Houses.\n\nIt is obvious that Casting Directors may skip your profile due to missing details.\n\nComplete your profile now and build your digital portfolio."
+        android:textSize="@dimen/_11sdp"
+        android:gravity="start"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-Team Dazzlerr"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:textColor="@color/colorBlack"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/completeProfileBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/app_btn_selector"
+            android:backgroundTint="@color/appColor"
+            android:textColor="@color/colorWhite"
+            android:text="Complete Profile"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+        <Button
+            android:id="@+id/gotToDashboardBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_round_border"
+            android:textColor="@color/appColor"
+            android:backgroundTint="@color/appColor"
+            android:text="Go to dashboard"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

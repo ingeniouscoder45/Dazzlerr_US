@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="ItemBinder"
+            type="com.dazzlerr_usa.views.activities.messagewindow.MessageWindowPojo.DataBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:gravity="end">
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_7sdp"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_end"
+        android:orientation="horizontal">
+
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            app:alignItems="flex_end"
+            app:flexDirection="column_reverse">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageLayout"
+                android:visibility="gone"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="@color/selectorGrey">
+
+                <ProgressBar
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_centerInParent="true"
+                    android:progressTint="@color/appColor"/>
+
+                <ImageView
+                    android:id="@+id/chatImage"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:visibility="visible"
+                    android:padding="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:paddingLeft="@dimen/_9sdp"
+                android:paddingRight="@dimen/_9sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:background="@drawable/rightbubble"
+                android:textColor="@color/colorWhite"
+                android:text="@{ItemBinder.message}"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/messageStatusIcon"
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/ic_baseline_sent_icon"/>
+
+                <TextView
+                    android:id="@+id/datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_9sdp"
+                    android:text=""
+                    android:textColor="#808080"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="bottom"
+                    />
+            </LinearLayout>
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+    </LinearLayout>
+</layout>

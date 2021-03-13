@@ -1,0 +1,429 @@
+<resources>
+    <string name="app_name">Dazzlerr</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_btn_allow">Allow</string>
+    <string name="permission_btn_deny">Deny</string>
+    <string name="permission_btn_cancel">Cancel</string>
+    <string name="permission_label_settings">Settings</string>
+
+    <string name="permission_rationale_location">Location permission is required for nearby functionality and recommendations.</string>
+    <string name="permission_denied_location">Without the location permission nearby functionality and recommendations will not work properly.</string>
+    <string name="permission_never_ask_again_location">You previously selected to never ask again for location permission. You have to manually grant them from the app settings.</string>
+
+    <string name="permission_rationale_camera_storage">Camera and Storage permission is required to access camera and select images from gallery.</string>
+    <string name="permission_denied_camera_storage">Without the Camera and Storage permission camera and gallery will not work.</string>
+    <string name="permission_never_ask_camera_storage">You previously selected to never ask again for Camera and Storage permission. You have to manually grant them from the app settings.</string>
+
+    <string name="permission_rationale_storage">Storage permission is required to select files from local storage.</string>
+    <string name="permission_denied_storage">Without the Storage permission, file selection will not work.</string>
+    <string name="permission_never_ask_storage">You previously selected to never ask again for Storage permission. You have to manually grant it from the app settings.</string>
+
+    <string name="permission_rationale_contact">Read Contact permission is required to access contacts for invite.</string>
+    <string name="permission_denied_read_contact">Without the Read Contact permission read contact will not work.</string>
+    <string name="permission_never_ask_contact">You previously selected to never ask again for Read Contact permission. You have to manually grant them from the app settings.</string>
+
+    <string name="permission_rationale_call">These permissions are required to make a call.</string>
+    <string name="permission_denied_call">Without the audio and microphone permissions call will not work.</string>
+    <string name="permission_never_ask_call">You previously selected to never ask again for audio and microphone permissions. You have to manually grant them from the app settings.</string>
+
+    <string name="error_check_internet_connection">No Internet Connection! Please check your internet connection</string>
+    <string name="error_api_failure">Unable to connect to the server</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="connection_txt">Please connect to Mobile network or WiFi.</string>
+    <string name="no_internet_txt">No internet Connection!</string>
+    <string name="signin_txt">You are not currently signed in. Kindly sign in/sign up to proceed.</string>
+    <string name="title_activity_elite_members">EliteMembersActivity</string>
+    <string name="published_error_title">Hidden Profile!</string>
+    <string name="published_error_message">You have hidden your profile. Please go to settings and unhide it to enjoy the benefits.</string>
+
+    <declare-styleable name="HtmlTextView">
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <string name="action_settings">Settings</string>
+    <string name="emailverification">Your email is not verified. Please verify it to proceed.</string>
+    <string name="add_video_instruction">1. Open Youtube Website or App.\n2. Go to the video you want to add.\n3. Click on share icon.\n4. Copy the displayed video link.\n5. Come back to Dazzlerr App.\n6. Paste the copied link into above video url box.</string>
+
+    <string-array name="haircolor_array">
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Dark Brown</item>
+        <item>Black Brown</item>
+        <item>Golden Brown</item>
+        <item>Burgundy</item>
+        <item>Blonde</item>
+    </string-array>
+
+    <string-array name="representer_array">
+        <item>Casting Coordinator</item>
+        <item>Casting/Modelling Agency</item>
+        <item>Casting Director</item>
+        <item>Wedding Planner</item>
+        <item>Fashion Designer</item>
+        <item>Film Producer</item>
+        <item>Film Production House</item>
+        <item> Event Management Company</item>
+        <item>Music Studio</item>
+        <item> Digital Entertainment Company</item>
+        <item>Corporate Organisation</item>
+        <item> Hotel / Restaurant</item>
+        <item> Tv Channel</item>
+        <item> Ad-film Maker</item>
+        <item> Radio Channel</item>
+        <item> Advertising Agency</item>
+        <item> Magazine / Newspaper</item>
+        <item> Others</item>
+
+    </string-array>
+
+    <string-array name="hairlength_array">
+        <item>Long</item>
+        <item>Medium</item>
+        <item>Short</item>
+        <item>Bald</item>
+    </string-array>
+
+
+    <string-array name="hairtype_array">
+        <item>Straight</item>
+        <item>Wavy</item>
+        <item>Curly</item>
+        <item>Kinky</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="eyecolor_array">
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Brown</item>
+        <item>Dark Brown</item>
+        <item>Black Brown</item>
+        <item>Green</item>
+        <item>Grey</item>
+        <item>Hazel</item>
+        <item>Violet</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="skintone_array">
+        <item>Very Fair</item>
+        <item>Fair</item>
+        <item>Wheatish</item>
+        <item>Dusky</item>
+        <item>Dark Brown</item>
+        <item>Black</item>
+    </string-array>
+
+    <string-array name="dresssize_array">
+        <item>-Select-</item>
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+        <item>XXL</item>
+    </string-array>
+
+    <string-array name="shoessize_array">
+        <item>UK-3</item>
+        <item>UK-4</item>
+        <item>UK-5</item>
+        <item>UK-5.5</item>
+        <item>UK-6</item>
+        <item>UK-6.5</item>
+        <item>UK-7</item>
+        <item>UK-7.5</item>
+        <item>UK-8</item>
+        <item>UK-8.5</item>
+        <item>UK-9</item>
+        <item>UK-9.5</item>
+        <item>UK-10</item>
+        <item>UK-10.5</item>
+        <item>UK-11</item>
+
+    </string-array>
+
+    <string-array name="prefered_location">
+        <item>-Select-</item>
+        <item>Anywhere in India</item>
+        <item>North India</item>
+        <item>South India</item>
+        <item>East India</item>
+        <item>West India</item>
+        <item>Mumbai</item>
+        <item>Delhi NCR</item>
+        <item>Chandigarh</item>
+        <item>Chennai</item>
+        <item>Kolkata</item>
+        <item>Bengaluru</item>
+        <item>Hyderabad</item>
+        <item>Ahmedabad</item>
+        <item>Pune</item>
+        <item>Goa</item>
+
+    </string-array>
+
+    <string-array name="availability_array">
+        <item>Full Time</item>
+        <item>Part Time</item>
+        <item>Weekends</item>
+        <item>Weekdays</item>
+    </string-array>
+    <string-array name="paymentmode_array">
+        <item>-Select-</item>
+        <item>Bank Transfer</item>
+        <item>Cheque</item>
+        <item>Paypal</item>
+        <item>Cash</item>
+    </string-array>
+    <string-array name="available_for">
+        <item>-Select-</item>
+        <item>Ramp Shows</item>
+        <item>Print Shoots</item>
+        <item>Calendar Shoots</item>
+        <item>Magazine Shoots</item>
+        <item>E-Commerce Shoots</item>
+        <item>Music Videos</item>
+        <item>Bikini Shoots</item>
+        <item>Swimsuit Shoots</item>
+        <item>Lingerie Shoots</item>
+        <item>Corporate Events</item>
+        <item>Weddings</item>
+        <item>Campus Events</item>
+        <item>Lounge Events</item>
+        <item>Private Parties</item>
+        <item>Others Event</item>
+    </string-array>
+    <string-array name="languages">
+        <item>-Select-</item>
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Punjabi</item>
+        <item>Afar</item>
+        <item>Abkhazian</item>
+        <item>Afrikaans</item>
+        <item>Amharic</item>
+        <item>Arabic</item>
+        <item>Assamese</item>
+        <item>Aymara</item>
+        <item>Azerbaijani</item>
+        <item>Bashkir</item>
+        <item>Belarusian</item>
+        <item>Bulgarian</item>
+        <item>Bihari</item>
+        <item>Bislama</item>
+        <item>Bengali/Bangla</item>
+        <item>Tibetan</item>
+        <item>Breton</item>
+        <item>Catalan</item>
+        <item>Corsican</item>
+        <item>Czech</item>
+        <item>Welsh</item>
+        <item>Danish</item>
+        <item>German</item>
+        <item>Bhutani</item>
+        <item>Greek</item>
+        <item>Esperanto</item>
+        <item>Spanish</item>
+        <item>Estonian</item>
+        <item>Basque</item>
+        <item>Persian</item>
+        <item>Finnish</item>
+        <item>Fiji</item>
+        <item>Faeroese</item>
+        <item>French</item>
+        <item>Frisian</item>
+        <item>Irish</item>
+        <item>Scots/Gaelic</item>
+        <item>Galician</item>
+        <item>Guarani</item>
+        <item>Gujarati</item>
+        <item>Hausa</item>
+        <item>Haryanavi</item>
+        <item>Croatian</item>
+        <item>Hungarian</item>
+        <item>Armenian</item>
+        <item>Interlingua</item>
+        <item>Interlingue</item>
+        <item>Inupiak</item>
+        <item>Indonesian</item>
+        <item>Icelandic</item>
+        <item>Italian</item>
+        <item>Hebrew</item>
+        <item>Japanese</item>
+        <item>Yiddish</item>
+        <item>Javanese</item>
+        <item>Georgian</item>
+        <item>Kazakh</item>
+        <item>Greenlandic</item>
+        <item>Cambodian</item>
+        <item>Kannada</item>
+        <item>Korean</item>
+        <item>Kashmiri</item>
+        <item>Kurdish</item>
+        <item>Kirghiz</item>
+        <item>Latin</item>
+        <item>Lingala</item>
+        <item>Laothian</item>
+        <item>Lithuanian</item>
+        <item>Latvian/Lettish</item>
+        <item>Malagasy</item>
+        <item>Maori</item>
+        <item>Macedonian</item>
+        <item>Malayalam</item>
+        <item>Mongolian</item>
+        <item>Moldavian</item>
+        <item>Marathi</item>
+        <item>Malay</item>
+        <item>Maltese</item>
+        <item>Maltese</item>
+        <item>Nauru</item>
+        <item>Nepali</item>
+        <item>Dutch</item>
+        <item>Norwegian</item>
+        <item>Occitan</item>
+        <item>(Afan)/Oromoor/Oriya</item>
+        <item>Polish</item>
+        <item>Pashto/Pushto</item>
+        <item>Portuguese</item>
+        <item>Phadi</item>
+        <item>Quechua</item>
+        <item>Rhaeto-Romance</item>
+        <item>Kirundi</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Kinyarwanda</item>
+        <item>Sanskrit</item>
+        <item>Sindhi</item>
+        <item>Sangro</item>
+        <item>Serbo-Croatian</item>
+        <item>Singhalese</item>
+        <item>Slovak</item>
+        <item>Slovenian</item>
+        <item>Samoan</item>
+        <item>Shona</item>
+        <item>Somali</item>
+        <item>Albanian</item>
+        <item>Serbian</item>
+        <item>Siswati</item>
+        <item>Sesotho</item>
+        <item>Sundanese</item>
+        <item>Swedish</item>
+        <item>Swahili</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Tajik</item>
+        <item>Thai</item>
+        <item>Tigrinya</item>
+        <item>Turkmen</item>
+        <item>Tagalog</item>
+        <item>Setswana</item>
+        <item>Tonga</item>
+        <item>Turkish</item>
+        <item>Tsonga</item>
+        <item>Tatar</item>
+        <item>Twi</item>
+        <item>Ukrainian</item>
+        <item>Urdu</item>
+        <item>Uzbek</item>
+        <item>Vietnamese</item>
+        <item>Volapuk</item>
+        <item>Wolof</item>
+        <item>Xhosa</item>
+        <item>Yoruba</item>
+        <item>Chinese</item>
+        <item>Zulu</item>
+    </string-array>
+</resources>

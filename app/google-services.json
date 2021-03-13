@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "1062745616465",
+    "firebase_url": "https://dazzlerr-e59bf.firebaseio.com",
+    "project_id": "dazzlerr-e59bf",
+    "storage_bucket": "dazzlerr-e59bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062745616465:android:4c2f6b495c2e20d04a4870",
+        "android_client_info": {
+          "package_name": "com.dazzlerr_usa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062745616465-chf9172fcguucgbmdb26hbfjppu55nif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF_EqqD1yIYqboKY74yS0AU48xKUVFwqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062745616465-chf9172fcguucgbmdb26hbfjppu55nif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1005862545553988~7593995971"
+    }
+  ],
+  "configuration_version": "1"
+}

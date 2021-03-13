@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="binderObj"
+            type="com.dazzlerr_usa.views.fragments.castingdashboard.CastingDashboardPojo.DataBean"/>
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/castingDashParentLayout"
+        tools:context=".views.fragments.talentdashboard.TalentDashboardFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome!"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginLeft="@dimen/_100sdp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/castingDashName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:layout_marginLeft="@dimen/_100sdp"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/colorLightGrey"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@color/colorWhite">
+
+
+                        <ImageView
+                            android:id="@+id/castingDashProfilePic"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_105sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:background="@drawable/edittext_border"/>
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_45sdp">
+
+                        <TextView
+                            android:id="@+id/castingDashUserStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Casting director / Mumbai"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:id="@+id/castingDashUserCompanyname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:id="@+id/castingDashUserType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{binderObj.member_type+` Member`}"
+                            android:textSize="@dimen/_11sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/appColor"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/castingDashMyJobsLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        android:backgroundTint="#216fc0"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/dashboard_round_border">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_heart_outline"
+                            android:padding="@dimen/_1sdp"
+                            android:scaleType="fitXY"
+                            app:tint="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Jobs"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{binderObj.my_jobs}"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/castingDashShortListedLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        android:backgroundTint="@color/appColor"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/dashboard_round_border">
+
+                        <ImageView
+                            android:layout_width="@dimen/_27sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:padding="@dimen/_1sdp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="-4dp"
+                            android:src="@drawable/ic_shortlisted"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shortlisted"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{binderObj.shortlisted}"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/castingDashFollowingsLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        android:backgroundTint="#a3c14f"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/dashboard_round_border">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:padding="@dimen/_1sdp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="-4dp"
+                            android:src="@drawable/ic_views"
+                            app:tint="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Followings"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{binderObj.followings}"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/castingDashMessagesLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        android:backgroundTint="#ed456e"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/dashboard_round_border">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:padding="@dimen/_1sdp"
+                            android:src="@drawable/ic_messages"
+                            android:scaleType="fitXY"
+                            app:tint="@color/colorWhite" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Call Logs"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{binderObj.messages}"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Featured Talents"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textColor="@color/appColor"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/appColor"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/featuredTalentsRecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+
+            <RelativeLayout
+                android:id="@+id/castingDashActiveJobsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:background="@drawable/red_banner_background"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Active jobs"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_13sdp"/>
+
+                    <Button
+                        android:id="@+id/castingDashAddJobBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/app_white_selector"
+                        android:text="Add New Job"
+                        android:drawableLeft="@drawable/fab_add"
+                        android:drawableTint="@color/appColor"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:elevation="@dimen/_5sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"/>
+
+                    <Button
+                        android:id="@+id/castingDashviewActiveJobsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/app_white_selector"
+                        android:text="View All"
+                        android:elevation="@dimen/_5sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activeJobsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/castingDashTalentsIntrestedJLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Talent interested in your jobs"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/appColor"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/appColor"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/interestedTalentsRecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/castingDashViewAllTalentsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/app_btn_selector"
+                    android:text="View All"
+                    android:textColor="@color/colorWhite"
+                    android:elevation="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search by role"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/appColor"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/appColor"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rolesRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

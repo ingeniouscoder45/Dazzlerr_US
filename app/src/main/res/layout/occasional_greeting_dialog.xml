@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/selectorGrey">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"/>
+
+    <ImageView
+        android:id="@+id/greetingImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/greetingCommonBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_40sdp"
+        android:visibility="gone"
+        android:background="#fffadc"
+        android:src="@drawable/common_occasion_background"
+        />
+
+    <ImageView
+        android:id="@+id/greetingCloseBtn"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/ic_cross"
+        app:tint="@color/colorLightGrey"
+        android:layout_margin="@dimen/_3sdp"
+        android:padding="@dimen/_13sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/greetingTitle"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dazzlerr wishing you very"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13sdp"/>
+
+        <TextView
+            android:id="@+id/greetingMessage"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Happy Birthday"
+            android:textColor="#b55660"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"/>
+
+    </LinearLayout>
+
+    <com.dazzlerr_usa.utilities.imageslider.EmojiRainLayout
+        android:id="@+id/group_emoji_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rotation="180"
+        app:per="12"
+        app:duration="2300"
+        app:dropDuration="2100"
+        app:dropFrequency="440"
+        >
+
+    </com.dazzlerr_usa.utilities.imageslider.EmojiRainLayout>
+</RelativeLayout>

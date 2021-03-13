@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="binderObj"
+            type="com.dazzlerr_usa.views.activities.blogs.pojos.BlogDetailsPojo.ResultBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.activities.elitememberdetails.EliteMemberDetailsActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/adView">
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_210sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/timelineImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/backBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:visibility="visible"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/ic_back_white_32dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/blogDetailsDateTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                />
+
+                            <TextView
+                                android:id="@+id/blogDetailsTitleTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{binderObj.blog_title}"
+                                android:textColor="@color/appColor"
+                                android:textSize="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textStyle="bold"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="@dimen/_10sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="@color/colorWhite"
+                                app:cardElevation="@dimen/_2sdp"
+                                android:layout_margin="@dimen/_4sdp">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_28sdp"
+                                    android:gravity="center"
+                                    android:layout_gravity="end"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_3sdp"
+                                    android:elevation="@dimen/_5sdp"
+                                    android:background="@drawable/edittext_borderwhitebackground2"
+                                    android:backgroundTint="#E1FFFFFF">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/_9sdp"
+                                        android:singleLine="true"
+                                        android:text="@{binderObj._post_views}"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorBlack"/>
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_9sdp"
+                                        android:src="@drawable/eye"
+                                        android:scaleType="fitXY"
+                                        android:layout_gravity="center"
+                                        app:tint="@color/colorBlack" />
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <LinearLayout
+                                android:id="@+id/blogDetailsShareBtn"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_28sdp"
+                                android:gravity="center"
+                                android:layout_gravity="end"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:background="@drawable/edittext_borderwhitebackground2"
+                                android:backgroundTint="@color/appColor">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_16sdp"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:src="@drawable/ic_share"
+                                    android:layout_gravity="center"
+                                    app:tint="@color/colorWhite" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/blogDetailsCategoryRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+                    <org.sufficientlysecure.htmltextview.HtmlTextView
+                        android:id="@+id/blogDetailsContentTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorBlack"
+                        android:lineSpacingExtra="6dp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_13sdp"
+                        android:text="Tags"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/blogDetailsTagsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Similar Posts"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/_12sdp"/>
+
+                        <TextView
+                            android:id="@+id/viewSimilarBlogsBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View All"
+                            android:textColor="@color/appColor"
+                            android:textSize="@dimen/_11sdp"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/similarBlogsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            ads:adSize="FULL_WIDTHx50"
+            android:visibility="gone"
+            ads:adUnitId="ca-app-pub-1005862545553988/1990832420">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="informationBinder"
+            type="com.dazzlerr_usa.views.fragments.profile.ProfilePojo.DataBean" />
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General Information"
+        android:textColor="@color/appColor"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agency Signed?"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+        <TextView
+            android:id="@+id/agencySigned"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:singleLine="true"
+            android:textColor="@color/colorLightGrey"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorLightGrey2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience Level"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+        <TextView
+            android:id="@+id/experienceLevel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@{informationBinder.exp_type.equals(``)?`Not Available`: (String.valueOf(informationBinder.exp_type.charAt(0)).toUpperCase()+informationBinder.exp_type.substring(1))}"
+            android:gravity="end"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:singleLine="true"
+            android:textColor="@color/colorLightGrey"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorLightGrey2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Languages Known"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+        <TextView
+            android:id="@+id/languageKnown"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@{informationBinder.languages.replace(`,` ,`, `)}"
+            android:gravity="end"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/colorLightGrey"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorLightGrey2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@{informationBinder.gender.equals(``)?`Not Available`: (String.valueOf(informationBinder.gender.charAt(0)).toUpperCase()+informationBinder.gender.substring(1))}"
+            android:gravity="end"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
+            android:textColor="@color/colorLightGrey"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone"
+        android:background="@color/colorLightGrey2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current State"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+        <TextView
+            android:id="@+id/currentState"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@{informationBinder.current_state.equals(``)?`Not Available`: (String.valueOf(informationBinder.current_state.charAt(0)).toUpperCase()+informationBinder.current_state.substring(1))}"
+            android:gravity="end"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:singleLine="true"
+            android:textColor="@color/colorLightGrey"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone"
+        android:background="@color/colorLightGrey2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current City"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/currentCty"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@{informationBinder.current_city.equals(``)?`Not Available`: (String.valueOf(informationBinder.current_city.charAt(0)).toUpperCase()+informationBinder.current_city.substring(1))}"
+            android:gravity="end"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:singleLine="true"
+            android:textColor="@color/colorLightGrey"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorLightGrey2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marital Status"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+        <TextView
+            android:id="@+id/maritalStatus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:singleLine="true"
+            android:textColor="@color/colorLightGrey"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorLightGrey2"/>
+</LinearLayout>
+</layout>

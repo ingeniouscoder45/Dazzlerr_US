@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:orientation="vertical"
+        android:background="@drawable/custom_dialog_curved_background"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/dialogALertImg"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_information"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/dialogTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify email!"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/dialogAlertTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To get latest updates, please verify your email. "
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            android:textAlignment="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_gravity="center_horizontal"/>
+
+
+
+        <EditText
+            android:id="@+id/dialogAlertEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            android:textAlignment="center"
+            android:singleLine="true"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:hint="Enter your email id"
+            android:background="@drawable/edittext_border"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <Button
+                android:id="@+id/dialogNegativeBtn"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Later"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/app_btn_selector"/>
+
+            <Button
+                android:id="@+id/dialogPositiveBtn"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Verify Now"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="visible"
+                android:textColor="@color/appColor"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:backgroundTint="@color/appColor"
+                android:background="@drawable/edittext_round_border"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/aviProgressBar"
+        style="@style/SpinKitView.RotatingPlane"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/appColor" />
+
+</RelativeLayout>

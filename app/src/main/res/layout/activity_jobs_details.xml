@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="jobdetailsBinder"
+            type="com.dazzlerr_usa.views.activities.jobsdetails.JobDetailsPojo.DataBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+
+        <include layout="@layout/job_details_titlelayout"
+            android:id="@+id/titleLayout"/>
+
+        <RelativeLayout
+            android:id="@+id/jobDetailsParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomLayout">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/job_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:text="@{jobdetailsBinder.title ==``? `-`: String.valueOf(jobdetailsBinder.title.charAt(0)).toUpperCase()+jobdetailsBinder.title.substring(1)}"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textColor="@color/appColor"
+            android:textStyle="bold"
+            />
+
+
+<!--                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@{`Total Views: `+jobdetailsBinder.views}"/>-->
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/_3sdp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:text="Job Code:"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appColor"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:hint="Not Available"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:text="@{jobdetailsBinder.job_uid}"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:adjustViewBounds="true"
+                        android:visibility="visible"
+                        android:scaleType="fitXY"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/jobDetailsNameTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{jobdetailsBinder.contact_person}"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorBlack"/>
+
+                                <TextView
+                                    android:id="@+id/jobDetailsRepresenterTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorLightGrey"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:hint="Not available"
+                                    android:visibility="visible"
+                                    android:text="@{jobdetailsBinder.representer}"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_39sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:background="@drawable/dash_rextangle"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/jobDetailsViewsTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1K+"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textColor="@color/colorBlack"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VIEWS"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:textColor="@color/colorBlack"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/jobsDetailsDummyLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_21sdp"/>
+
+                        <LinearLayout
+                            android:id="@+id/contactLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/_8sdp">
+                            <Button
+                                android:id="@+id/getContactDetailsBtn"
+                                android:layout_width="@dimen/_90sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:text="Contact Details"
+                                android:background="@drawable/app_btn_selector"
+                                android:textColor="@color/colorWhite"
+                                android:textAllCaps="false"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:textSize="@dimen/_11sdp"
+                                />
+                            <Button
+                                android:id="@+id/sendMessageBtn2"
+                                android:layout_width="@dimen/_90sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:background="@drawable/app_btn_selector"
+                                android:textSize="@dimen/_11sdp"
+                                android:text="Apply Now"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/colorWhite"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--app:modelImage="@{jobdetailsBinder.profile_pic}"-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:textColor="@color/appColor"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/job_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:lineSpacingMultiplier="1.3"
+            android:text="@{jobdetailsBinder.description}"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_18sdp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JOB ROLE:"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{jobdetailsBinder.job_role}"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/colorLightGrey"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GENDER:"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{jobdetailsBinder.gender}"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/colorLightGrey"/>
+
+                </LinearLayout>
+                
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AGE RANGE:"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{jobdetailsBinder.age_range}"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/colorLightGrey"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NO. OF VOCANCIES:"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{jobdetailsBinder.vacancies}"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/colorLightGrey"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AUDITION REQUIRED"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/auditionRequiredTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/colorLightGrey"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="JOB EXPIRY DATE:"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/expiry_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/appColor"/>
+
+                    <!--app:date_format="@{jobdetailsBinder.job_expiry}"-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BUDGET"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{jobdetailsBinder.budget}"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/colorLightGrey"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BUDGET DURATION:"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{jobdetailsBinder.budget_duration}"
+                        android:textSize="@dimen/_11sdp"
+                        android:hint="Not available"
+                        android:textColorHint="@color/colorLightGrey"
+                        android:textColor="@color/appColor"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/edittextdashed_border"
+              android:backgroundTint="@color/appColor"
+              android:orientation="vertical"
+              android:padding="@dimen/_10sdp"
+              android:layout_marginTop="@dimen/_18sdp"
+              android:gravity="center">
+              
+              <ImageView
+                  android:layout_width="@dimen/_20sdp"
+                  android:layout_height="@dimen/_20sdp"
+                  android:background="@drawable/ic_location"
+                  android:backgroundTint="@color/appColor"
+                  />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Venue"
+                  android:textSize="@dimen/_13sdp"
+                  android:textStyle="bold"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:textColor="@color/appColor"
+                  />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@{jobdetailsBinder.address+`, `+jobdetailsBinder.city+`, `+ jobdetailsBinder.state_name}"
+                  android:textSize="@dimen/_12sdp"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:textColor="@color/colorBlack"
+                  />
+
+
+          </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/_18sdp">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:background="@drawable/ic_calendar"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/colorLightGrey"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_2sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="START DATE"
+                            android:textColor="@color/appColor"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/start_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/colorBlack"/>
+
+
+                        <!--app:date_format="@{jobdetailsBinder.start_date}"-->
+                    </LinearLayout>
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:background="@drawable/ic_calendar"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/colorLightGrey"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_2sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="END DATE"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/appColor"/>
+
+                        <TextView
+                            android:id="@+id/end_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/colorBlack"/>
+
+
+                        <!--app:date_format="@{jobdetailsBinder.end_date}"-->
+                    </LinearLayout>
+                </LinearLayout>
+</LinearLayout>
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/_18sdp"
+                 android:textSize="@dimen/_13sdp"
+                 android:textStyle="bold"
+                 android:textColor="@color/appColor"
+                 android:text="Tags:"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tagsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/noTagsFoundTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="No tags found"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        />
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    ads:adSize="FULL_WIDTHx50"
+                    android:visibility="gone"
+                    android:background="@color/selectorGrey"
+                    ads:adUnitId="ca-app-pub-1005862545553988/1990832420">
+                </com.google.android.gms.ads.AdView>
+
+                <LinearLayout
+                    android:id="@+id/replyLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:background="@drawable/edittext_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/talentPurposalStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:paddingLeft="@dimen/_12sdp"
+                            android:paddingRight="@dimen/_12sdp"
+                            android:textSize="@dimen/_11sdp"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:background="@color/colorGreen"/>
+
+                        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:padding="@dimen/_6sdp">
+
+                    <ImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="start"
+                        android:scaleType="fitXY"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/currentuserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Applied on:"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/appColor"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/appliedDateTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:textColor="@color/colorLightGrey"
+                                android:textSize="@dimen/_10sdp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/currentuserMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:lineSpacingMultiplier="1.3"
+                            android:text="@{jobdetailsBinder.profile_msg}"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/castingReplyLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_border"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/castingReplyPersonName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"/>
+                            <TextView
+                                android:id="@+id/castingReplyPersonName1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="italic"
+                                android:text=" replied:"
+                                android:textColor="@color/colorBlack"/>
+
+                        </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/castingReply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/colorDarkGrey"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@{jobdetailsBinder.casting_reply}"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/castingPorposalsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/appColor"
+                        android:text="Proposals:"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/selectorGrey"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="?actionBarSize"
+                        app:tabIndicatorColor="@color/appColor"
+                        app:tabIndicatorHeight="@dimen/_2sdp"
+                        app:tabBackground="@color/colorWhite"
+                        app:tabTextAppearance="@style/TextTabLabel1"
+                        app:tabSelectedTextColor="@color/appColor"
+                        app:tabMode="scrollable"
+                        app:tabGravity="fill"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/selectorGrey"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/proposalsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/noPorposalsFoundTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="Proposals not found!"
+                    android:textSize="@dimen/_10sdp"
+                    android:background="@drawable/edittext_border"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_70sdp"
+                    android:visibility="gone"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/sendMessageBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_1sdp"
+                    android:layout_weight="1"
+                    android:background="@color/appColor"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:text="Apply Now"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Button
+                    android:id="@+id/shortlistJobBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight="1"
+                    android:background="@color/appColor"
+                    android:paddingLeft="@dimen/_30sdp"
+                    android:paddingRight="@dimen/_30sdp"
+                    android:text="Shortlist"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+    </RelativeLayout>
+</layout>

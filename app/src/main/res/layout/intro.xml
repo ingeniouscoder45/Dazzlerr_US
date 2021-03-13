@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nextLayout">
+
+
+        <ImageView
+            android:id="@+id/slideimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/nextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/skipBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="Skip"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_11sdp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorLightGrey"/>
+
+        <LinearLayout
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="NEXT"
+            android:textSize="@dimen/_11sdp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/appColor"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/startLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let's Start"
+                android:textSize="@dimen/_24sdp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let's get started by creating your talent profile"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_35sdp"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/startBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/edittext_round_border"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12sdp"
+                android:backgroundTint="@color/colorWhite"
+                android:visibility="visible"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_alignParentBottom="true"
+                android:text="Get Started"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.activities.UserInActiveActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_40sdp"
+        android:background="@color/appColor">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_dazzlerr_logo"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Deactivated"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/messageTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Inactive"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/colorBlack"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp">
+
+        <Button
+            android:id="@+id/OkBtn"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/app_btn_selector"
+            android:text="Ok"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/contactusBtn"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:textSize="@dimen/_11sdp"
+            android:backgroundTint="@color/appColor"
+            android:background="@drawable/edittext_round_border"
+            android:text="Contact Support"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/appColor"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,173 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.dazzlerr_usa"
+        minSdkVersion 17
+        targetSdkVersion 29
+        versionCode 15
+        versionName "2.1.1"
+        multiDexEnabled true// Enabling multidex support.
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+/*        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true*/
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    buildTypes {
+        release {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    dataBinding
+            {
+                enabled = true;
+            }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.jeremyfeinstein.slidingmenu:library:1.3@aar'
+    implementation 'com.github.GoodieBag:Pinview:v1.3'
+
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.labo.kaji:fragmentanimations:0.1.1'
+    implementation 'com.google.android.material:material:1.2.1'
+
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10"
+
+    implementation 'com.droidninja:filepicker:2.2.1'
+    //implementation 'com.google.android.exoplayer:exoplayer:2.10.3'
+
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.3.4'
+    implementation 'com.google.android:flexbox:1.1.0'
+    implementation 'com.github.clans:fab:1.6.4'
+
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.21'
+    implementation 'com.android.support:multidex:1.0.3'
+    // Runtime permission
+    dependencies {
+        implementation "org.permissionsdispatcher:permissionsdispatcher:$permissionDispatcherVersion"
+        kapt "org.permissionsdispatcher:permissionsdispatcher-processor:$permissionDispatcherVersion"
+    }
+
+    // Swipe to delete recyclerview library dependency
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.github.chivorns:smartmaterialspinner:1.1.6'
+
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'//Progress loader
+    implementation 'com.google.android.play:core:1.9.0'//In App version updater
+    implementation "com.github.skydoves:progressview:1.0.3"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2"
+    implementation 'com.luolc:emoji-rain:0.1.1'
+    implementation "com.github.skydoves:androidribbon:1.0.1"
+    implementation 'com.github.sephiroth74:android-target-tooltip:v2.0.4'
+    implementation 'com.github.davidpizarro:pickerui:1.0.1'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+    implementation 'xyz.peridy.shimmer:shimmerlayout:1.1'
+    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+    implementation 'com.vincent.filepicker:MultiTypeFilePicker:1.0.8'
+
+    implementation 'com.google.android.gms:play-services-ads:19.5.0'
+
+    implementation 'com.jackandphantom.android:androidlikebutton:1.2.0'
+    implementation 'pub.hanks:smallbang:1.2.2'
+
+    //animations
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+
+
+    // Crystal seek bar library using in filter celeb screen
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+
+
+    // Multislider for stars in Filter
+    implementation 'io.apptik.widget:multislider:1.3'
+
+
+    //Sinch Dependency
+    compile(name:'sinch-android-rtc', version:'+', ext:'aar')
+
+
+    //Paypal Braintree
+    implementation 'com.braintreepayments.api:drop-in:3.7.0'
+    implementation 'com.braintreepayments.api:braintree:2.16.0'
+
+
+    implementation 'org.sufficientlysecure:html-textview:4.0'
+
+}
+
+
+
+repositories {
+    mavenCentral()
+
+}

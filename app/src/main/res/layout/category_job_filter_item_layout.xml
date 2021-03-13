@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="modelBinder"
+            type="com.dazzlerr_usa.views.activities.jobfilter.JobCategoryPojo" />
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/category_background_select">
+
+            <ImageView
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:src="@drawable/ic_dazzlerr"
+                app:tint="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/category_filter_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{modelBinder.type}"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_10sdp"/>
+
+    </LinearLayout>
+</layout>

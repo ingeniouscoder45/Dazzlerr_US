@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="modelBinder"
+            type="com.dazzlerr_usa.views.fragments.portfolio.pojos.PortfolioImagesPojo.DataBean">
+        </variable>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/portfolioImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="#e9e9e9"/>
+
+        <RelativeLayout
+            android:id="@+id/selectedImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#5E000000">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/ic_checked"/>
+
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                android:background="#60000000"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/likeBtn"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_like_deselected"
+                    app:tint="#389bde"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/totalLikesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{modelBinder.likes}"
+                    android:textSize="@dimen/_9sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="@dimen/_1sdp"/>
+
+                <ImageView
+                    android:id="@+id/heartBtn"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:src="@drawable/heart_deselected"
+                    app:tint="@color/appColor"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/totalHeartsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{modelBinder.hearts}"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="@dimen/_1sdp"/>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

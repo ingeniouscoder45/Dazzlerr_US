@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardElevation="@dimen/_5sdp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:gravity="center_vertical"
+    android:id="@+id/title_layout"
+    android:orientation="horizontal"
+    android:layout_height="@dimen/_50sdp">
+
+    <ImageView
+    android:id="@+id/leftbtn"
+    android:layout_width="@dimen/_35sdp"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
+    android:visibility="visible"
+    android:layout_centerVertical="true"
+    android:src="@drawable/ic_back_white_32dp"
+        app:tint="@color/colorBlack" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:theme="@style/AppSearchView"
+        android:focusable="true"
+        app:searchIcon="@null"
+        app:queryBackground="@android:color/transparent"
+        app:iconifiedByDefault="false"/>
+
+    <ImageView
+        android:id="@+id/searchBtn"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:layout_toRightOf="@id/searchView"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_search"
+        android:tint="@color/colorBlack"
+        android:layout_gravity="center_vertical"/>
+
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlelayout"
+            android:id="@+id/titleLayout"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/contactName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:hint="Name"
+                    android:enabled="false"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:background="@drawable/edittext_border"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/contactEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:hint="Email"
+                    android:enabled="false"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:background="@drawable/edittext_border"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/contactPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:hint="Phone"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:enabled="false"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:background="@drawable/edittext_border"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/contactSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:singleLine="true"
+                    android:hint="Subject"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/selectorGrey"
+                    android:background="@drawable/edittext_border"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please select a problem to report:"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/colorBlack"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reportReasonsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+
+                <LinearLayout
+                    android:id="@+id/reportMessageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write a reason:"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    android:textColor="@color/appColor"/>
+
+                <EditText
+                    android:id="@+id/contactMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="Write your problem here..."
+                    android:maxLength="300"
+                    android:gravity="start"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/edittext_border"
+                    android:backgroundTint="@color/selectorGrey"
+                    />
+
+
+                <TextView
+                    android:id="@+id/characterLeftTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Characters left: 300"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_3sdp"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/sendMessageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/app_btn_selector"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="Send"/>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+    </RelativeLayout>
+</layout>

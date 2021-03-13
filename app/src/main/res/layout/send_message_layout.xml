@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:text="Message"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_8sdp"
+                android:background="@color/appColor"
+                android:textColor="@color/colorWhite"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="Note: This is not a chat window, do write your full message here."/>
+
+    <EditText
+        android:id="@+id/messageEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/colorDarkGrey"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:hint="Type your message here..."
+        android:maxLength="300"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:gravity="start"
+        android:padding="@dimen/_10sdp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/colorLightGrey"
+        />
+
+    <TextView
+        android:id="@+id/messageCharactersTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorLightGrey"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="Characters left: 300"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_65sdp">
+        <Button
+            android:id="@+id/messageSubmitBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:text="Submit"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/appColor"
+            android:textSize="@dimen/_10sdp"/>
+
+        <Button
+            android:id="@+id/messageCancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/colorBlack"
+            android:text="Cancel"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@color/colorLightGrey2"
+            android:textSize="@dimen/_10sdp"/>
+
+    </LinearLayout>
+</LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

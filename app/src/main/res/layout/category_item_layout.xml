@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="modelBinder"
+            type="com.dazzlerr_usa.views.fragments.home.pojos.HomeCategoryPojo.DataBean" />
+    </data>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_12sdp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/category_background_select">
+
+        <ImageView
+            android:id="@+id/categoryImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{modelBinder.stat}"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_12sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{modelBinder.user_role}"
+        android:layout_marginTop="-4dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_10sdp"/>
+
+</LinearLayout>
+</layout>

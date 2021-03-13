@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="jobsBinder"
+            type="com.dazzlerr_usa.views.fragments.castingprofile.pojo.CastingMyJobPojo.DataBean" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@{jobsBinder.title}"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/editJobBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Job"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:padding="@dimen/_3sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="@dimen/_12sdp"
+            android:drawableTint="@color/appColor"
+            android:drawableLeft="@drawable/ic_edit_white_24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_5sdp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ic_briefcase"
+                android:padding="@dimen/_2sdp"
+                app:tint="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{jobsBinder.user_role}"
+                android:textSize="@dimen/_11sdp"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/_3sdp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:src="@drawable/ic_calendar"
+                android:padding="@dimen/_3sdp"
+                app:tint="@color/colorLightGrey" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/_3sdp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_5sdp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/ic_location"
+                app:tint="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{jobsBinder.city}"
+                android:textSize="@dimen/_11sdp"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/_3sdp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_borderwhitebackground"
+            android:paddingLeft="@dimen/_9sdp"
+            android:paddingRight="@dimen/_9sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:textColor="@color/colorWhite"
+            android:singleLine="true"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:textSize="@dimen/_11sdp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_5sdp">
+        <Button
+            android:id="@+id/jobPauseOrActiveBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_weight="1"
+            android:text="Pause"
+            android:gravity="center"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/appColor"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:textSize="@dimen/_10sdp"
+            android:backgroundTint="@color/appColor"/>
+
+
+        <Button
+            android:id="@+id/jobCompleteBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_weight="1"
+            android:text="Complete"
+            android:gravity="center"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/appColor"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:textSize="@dimen/_10sdp"
+            android:backgroundTint="@color/appColor"/>
+    </LinearLayout>
+</LinearLayout>
+</layout>

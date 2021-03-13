@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include layout="@layout/simpletitlelayout"
+        android:id="@+id/titleLayout"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload your video holding the same identity proof uploaded in step 1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check reference video"
+            android:textColor="@color/appColor"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note:\n- Your face and identity proof must be clearly visible.\n- Do not use front camera.\n- Use landscape mode only to capture video"
+            android:textColor="@color/LighGrey"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_10sdp"/>
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_gravity="center">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <ProgressBar
+        android:id="@+id/pd"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:foregroundTint="@color/appColor"/>
+</FrameLayout>
+
+    </LinearLayout>
+        </ScrollView>
+</LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/aviProgressBar"
+        style="@style/SpinKitView.RotatingPlane"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/appColor" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/CaptureBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/appColor"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:visibility="visible"
+            android:text="Capture"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal"/>
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/SubmitBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/appColor"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:enabled="false"
+            android:visibility="visible"
+            android:text="Submit"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+</RelativeLayout>
+</layout>

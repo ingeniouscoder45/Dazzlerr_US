@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- "background shadow" -->
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <!-- background color -->
+    <item
+        android:bottom="@dimen/_2sdp"
+        android:left="@dimen/_2sdp"
+        android:right="@dimen/_2sdp"
+        android:top="@dimen/_2sdp">
+        <shape android:shape="rectangle" >
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <!-- over left shadow -->
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="180"
+                android:centerColor="#00FF0000"
+                android:centerX="0.7"
+                android:endColor="#30000000"
+                android:startColor="#00FF0000" />
+
+
+        </shape>
+    </item>
+    <!-- over right shadow -->
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="360"
+                android:centerColor="#00FF0000"
+                android:centerX="0.7"
+                android:endColor="#30000000"
+                android:startColor="#00FF0000" />
+
+
+        </shape>
+    </item>
+    <!-- over top shadow -->
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="-90"
+                android:centerColor="#00FF0000"
+                android:centerY="0.7"
+                android:endColor="#00FF0000"
+                android:startColor="#30000000"
+                android:type="linear" />
+
+
+        </shape>
+    </item>
+    <!-- over bottom shadow -->
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="90"
+                android:centerColor="#00FF0000"
+                android:centerY="0.7"
+                android:endColor="#00FF0000"
+                android:startColor="#30000000"
+                android:type="linear" />
+
+        </shape>
+    </item>
+</layer-list>

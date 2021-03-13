@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="MessageBinder"
+            type="com.dazzlerr_usa.views.fragments.messages.MessagesListPojo.DataBean" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+<!--    <com.daimajia.swipe.SwipeLayout
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp"
+        swipe:drag_edge="right"
+        swipe:clickToClose="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/appColor"
+            android:gravity="center_vertical"
+            android:tag="Bottom3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/ic_delete_black_24dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Do you want to delete this message?"
+                android:textColor="#fff"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                swipe:cardElevation="@dimen/_5sdp"
+                swipe:cardCornerRadius="0dp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                swipe:cardBackgroundColor="@color/colorWhite">
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@color/colorWhite"
+                android:text="Yes, delete it"
+                android:textAllCaps="false"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/appColor" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sender_pic"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            modelImage="@{MessageBinder.sender_pic}"
+            android:layout_margin="@dimen/_7sdp"
+            app:civ_circle_background_color="@color/selectorGrey"/>
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@{MessageBinder.name}"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_13sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:set_formatted_text="@{MessageBinder.created_on}"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{MessageBinder.subject}"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:singleLine="true"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:textSize="@dimen/_11sdp"
+                />
+
+
+        </LinearLayout>
+
+<!--    </com.daimajia.swipe.SwipeLayout>-->
+
+</LinearLayout>
+</layout>

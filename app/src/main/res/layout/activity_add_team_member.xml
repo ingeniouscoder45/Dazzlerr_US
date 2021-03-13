@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.activities.profileteam.AddTeamMemberActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include layout="@layout/simpletitlelayout"
+        android:id="@+id/titleLayout"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/colorLightGrey"
+        android:padding="@dimen/_3sdp">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_95sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/teamMemberPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorLightGrey2"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:background="#92000000"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/colorWhite"
+            android:text="Upload\nMember's Picture"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Member Name"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/appColor"/>
+
+    <EditText
+        android:id="@+id/memberNameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/edittext_border"
+        android:paddingLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@color/selectorGrey"
+        android:textSize="@dimen/_10sdp"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorBlack"
+        android:maxLength="50"
+        android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:inputType="textFilter|textCapSentences"
+        android:hint="Enter your member's name here"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Member Role"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/appColor"/>
+
+            <EditText
+                android:id="@+id/memberRoleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/edittext_border"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:backgroundTint="@color/selectorGrey"
+                android:textSize="@dimen/_10sdp"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:maxLength="50"
+                android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:inputType="textFilter|textCapSentences"
+                android:hint="Enter your member's role here"/>
+
+            <Button
+                android:id="@+id/addTeamMemberSubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Submit"
+                android:textSize="@dimen/_10sdp"
+                android:background="@drawable/app_btn_selector"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/_40sdp"/>
+
+        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/aviProgressBar"
+        style="@style/SpinKitView.RotatingPlane"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/appColor" />
+
+</RelativeLayout>
+</layout>

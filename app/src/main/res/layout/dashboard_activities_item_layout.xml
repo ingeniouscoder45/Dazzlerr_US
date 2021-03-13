@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="binderObj"
+            type="com.dazzlerr_usa.views.fragments.talentdashboard.TalentDashboardPojo.ActivityLogBean" />
+    </data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/activityTimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_9sdp"
+        android:textColor="@color/appColor"/>
+
+    <TextView
+        android:id="@+id/activityContentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:textAlignment="inherit"
+        android:justificationMode="inter_word"
+        android:text="@{binderObj.activity_desc}"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/colorBlack"/>
+
+
+</LinearLayout>
+</layout>

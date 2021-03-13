@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="bindingObj"
+            type="com.dazzlerr_usa.views.activities.interestedtalents.InterestedTalentsPojo.DataBean" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edittextbottomborder"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/talentProfilePic"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_80sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/interestedTalentAppliedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appColor"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{bindingObj.name}"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{(bindingObj.user_role.equals(``)? `` : String.valueOf(bindingObj.user_role.charAt(0)).toUpperCase()+ bindingObj.user_role.substring(1)) +` `+(bindingObj.secondary_role.equals(``)? `` : `| `+ String.valueOf(bindingObj.secondary_role.charAt(0)).toUpperCase()+ bindingObj.secondary_role.substring(1))}"
+            android:textColor="@color/colorLightGrey"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Applied for:"
+            android:textColor="@color/appColor"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{bindingObj.title}"
+            android:textColor="@color/colorLightGrey"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+</layout>

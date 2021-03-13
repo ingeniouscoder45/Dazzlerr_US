@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="binderObj"
+            type="com.dazzlerr_usa.views.activities.blogs.pojos.BlogListPojo.ResultBean"  />
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/blogImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@color/colorLightGrey2"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@{binderObj.blog_title}"
+                android:gravity="center_vertical"
+                android:textColor="@color/appColor"
+                android:textSize="@dimen/_12sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:lineSpacingExtra="2dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:backgroundTint="#E1FFFFFF">
+
+                <TextView
+                    android:id="@+id/blogDateTxt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorLightGrey"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:src="@drawable/eye"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    app:tint="@color/colorBlack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:text="@{binderObj._post_views}"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="binderObj"
+            type="com.dazzlerr_usa.views.activities.institutedetails.InstituteDetailsPojo.Data" />
+    </data>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.activities.eventdetails.EventDetailsActivity">
+
+        <include layout="@layout/simpletitlelayout"
+            android:id="@+id/titleLayout"/>
+
+        <RelativeLayout
+            android:id="@+id/eventDetailsMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleLayout">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/contactUsBtn">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{binderObj.institute_name}"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/instituteImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"                />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/_10sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:padding="@dimen/_9sdp"
+                            android:src="@drawable/ic_institute_phone"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_11sdp"
+                                android:text="Contact No."
+                                android:textColor="@color/appColor"
+                                android:textStyle="bold"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/contactRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-5dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_41sdp"
+                            android:padding="@dimen/_7sdp"
+                            android:src="@drawable/ic_institute_email"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_11sdp"
+                                android:text="Email"
+                                android:textColor="@color/appColor"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/emailBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:text="@{binderObj.institute_email.equals(``)?`Not available`:binderObj.institute_email}"
+                                android:textColor="@color/colorBlack"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:padding="@dimen/_7sdp"
+                            android:src="@drawable/ic_institute_address"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_11sdp"
+                                android:text="Website"
+                                android:textColor="@color/appColor"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/websiteBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_10sdp"
+                                android:text="@{binderObj.website.equals(``)?`Not available`:binderObj.website}"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:textColor="@color/colorBlack"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_10sdp">
+                        <ImageView
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:padding="@dimen/_7sdp"
+                            android:src="@drawable/ic_institute_website"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_11sdp"
+                                android:text="Address"
+                                android:textColor="@color/appColor"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_10sdp"
+                                android:text="@{binderObj.address.equals(``)?`Not available`:binderObj.address}"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:textColor="@color/colorBlack"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@color/appColor"
+                        android:paddingTop="@dimen/_25sdp"
+                        android:paddingBottom="@dimen/_25sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="About - "
+                                android:textSize="@dimen/_16sdp"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{binderObj.institute_name}"
+                                android:textSize="@dimen/_15sdp"
+                                android:textColor="@color/colorWhite"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_2sdp"
+                            android:background="@color/colorWhite"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+                        </LinearLayout>
+                    <TextView
+                        android:id="@+id/instituteDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.5"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/appColor"
+                            android:text="Courses"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_16sdp"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorBlack"
+                            android:text=" Offered"
+                            android:textSize="@dimen/_15sdp"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorBlack"
+                            android:layout_centerVertical="true"/>
+
+
+                        <View
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_3sdp"
+                            android:background="@color/appColor"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/courseTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Course Name"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableTint="@color/colorBlack"
+                            android:drawableLeft="@drawable/ic_star_pointer"
+                            android:textColor="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Course Duration"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableTint="@color/colorBlack"
+                            android:drawableLeft="@drawable/ic_star_pointer"
+                            android:textColor="@color/colorBlack"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/errorCoursesTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No courses found!"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/coursesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/appColor"
+                            android:text="Gallery"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_16sdp"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorBlack"
+                            android:layout_centerVertical="true"/>
+
+
+                        <View
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_3sdp"
+                            android:background="@color/appColor"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/GaleryRecyclerview"
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:id="@+id/errorGalleyTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No images"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+
+
+    </RelativeLayout>
+</layout>

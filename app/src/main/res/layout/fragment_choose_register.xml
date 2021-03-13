@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".views.fragments.register.localfragments.ChooseRegisterFragment">
+
+    <include
+        layout="@layout/titlelayout"
+        android:id="@+id/title_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+<ImageView
+    android:layout_width="@dimen/_70sdp"
+    android:layout_height="@dimen/_60sdp"
+    android:src="@drawable/model_icon"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/_30sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODEL | ANCHOR | MUA etc"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am looking for work"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorLightGrey1"/>
+
+    <Button
+        android:id="@+id/registerAsModelBtn"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:text="Create your profile"
+        android:drawableRight="@drawable/forward_icon"
+        android:textColor="@color/colorWhite"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/category_background_select"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:elevation="@dimen/_5sdp"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_20sdp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_weight="1"
+        android:layerType="software"
+        android:background="@drawable/dash_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textSize="@dimen/_13sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:textColor="@color/appColor"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_5sdp"
+        android:layerType="software"
+        android:background="@drawable/dash_line"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:src="@drawable/casting_icon"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLIENT | DIRECTOR etc"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/colorBlack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I want to hire artist"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorLightGrey1"/>
+
+    <Button
+        android:id="@+id/registerAsCastingBtn"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:text="      Start hiring"
+        android:drawableRight="@drawable/forward_icon"
+        android:textColor="@color/colorWhite"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/category_background_select"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:elevation="@dimen/_5sdp"
+        />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+</layout>

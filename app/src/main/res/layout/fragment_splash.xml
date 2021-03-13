@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_background"
+    tools:context=".views.fragments.SplashFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_bg_light"
+        />
+
+    <LinearLayout
+        android:id="@+id/logocontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/logoIcon"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:src="@drawable/ic_dazzlerr_circle"
+            />
+
+        <ImageView
+            android:id="@+id/titleTxt"
+            android:layout_width="@dimen/_135sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_dazzlerr_title_1"
+            />
+
+        <ImageView
+            android:id="@+id/taglineTxt"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_dazzlerr_title_2"
+            />
+    </LinearLayout>
+</FrameLayout>
+</layout>

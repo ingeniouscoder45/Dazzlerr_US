@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="appColor">#ff232f</color>
+    <color name="splash_background">#fc2626</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTransparentWhite">#A1FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDarkGrey">#3a3a3a</color>
+    <color name="colorLightGrey">#989898</color>
+    <color name="colorLightGrey1">#BA000000</color>
+    <color name="colorLightGrey2">#dcdcdc</color>
+    <color name="eliteItemColor">#1b1c2e</color>
+    <color name="featuredItemColor">#ff232f</color>
+    <color name="colorYellow">#e3b11a</color>
+    <color name="colorGreen">#2E9709</color>
+    <color name="colorGreenLight">#6ecf37</color>
+    <color name="LighGrey">#4c4c4c</color>
+    <color name="TopRatedColor">#758c33</color>
+    <color name="TrendingColor">#2e79be</color>
+    <color name="skyBlueColor">#00BCD4</color>
+    <color name="profileTextColor">#9e895b</color>
+
+    <color name="selectorGrey">#e5e5e5</color>
+
+    <color name="vw_BgToolBar">#ff232f</color>
+
+</resources>

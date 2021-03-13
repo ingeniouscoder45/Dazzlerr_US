@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <com.dazzlerr_usa.views.fragments.intro.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="@dimen/_320sdp"
+        android:layout_height="match_parent"
+        android:background="@color/selectorGrey"
+        android:layout_gravity="center">
+
+    </com.dazzlerr_usa.views.fragments.intro.CustomViewPager>
+</RelativeLayout>
+</layout>

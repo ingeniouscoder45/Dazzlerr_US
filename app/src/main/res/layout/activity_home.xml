@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/titlelayout"
+                android:id="@+id/title_layout"/>
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottomRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/bottomNav_homeBtn"
+                android:layout_width="@dimen/_54sdp"
+                android:layout_height="@dimen/_54sdp"
+                android:background="@drawable/white_circle"
+                android:elevation="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:src="@drawable/ic_home"
+                android:padding="@dimen/_12sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                app:tint="@color/appColor" />
+
+            <LinearLayout
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/appColor"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/bottomNav_dashboardBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:src="@drawable/ic_dashboard"
+                        android:scaleType="centerCrop"
+                        app:tint="@color/colorWhite" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dashboard"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomNav_profileBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_19sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:paddingTop="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_1sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_profile"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomNav_talentBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:src="@drawable/ic_talent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Talent"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bottomNav_jobsBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_21sdp"
+                        android:layout_height="@dimen/_22sdp"
+                        android:src="@drawable/ic_jobs"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jobs"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+        </RelativeLayout>
+
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+
+         <!--It is a alpha view for making screen dim when sliding menu-->
+        <View
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</layout>

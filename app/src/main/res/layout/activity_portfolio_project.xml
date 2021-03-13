@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.activities.portfolio.addproject.PortfolioProjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <include layout="@layout/simpletitlelayout"
+        android:id="@+id/titleLayout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project title"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/appColor"/>
+
+        <EditText
+            android:id="@+id/ProjectTitleEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:textColor="@color/colorDarkGrey"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/colorLightGrey"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:singleLine="true"
+            android:maxLength="255"
+            android:inputType="textCapSentences"
+            android:hint="Project title"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project role"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/appColor"/>
+
+        <EditText
+            android:id="@+id/ProjectRoleEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:textColor="@color/colorDarkGrey"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/colorLightGrey"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11sdp"
+            android:singleLine="true"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+            android:inputType="textCapSentences|textFilter"
+            android:maxLength="50"
+            android:hint="Project role"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start date"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/appColor"/>
+
+
+        <TextView
+            android:id="@+id/ProjectStartDateText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="@dimen/_11sdp"
+            android:gravity="center_vertical"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/colorLightGrey"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:hint="Select start date"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End date"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/appColor"/>
+
+        <TextView
+            android:id="@+id/ProjectEndDateText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:textColor="@color/colorDarkGrey"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/colorLightGrey"
+            android:textSize="@dimen/_11sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:singleLine="true"
+            android:hint="Select end date"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/appColor"/>
+
+        <EditText
+            android:id="@+id/ProjectDescriptionEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkGrey"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/colorLightGrey"
+            android:textSize="@dimen/_11sdp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:lines="10"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="start"
+            android:maxLength="500"
+            android:hint="Description"/>
+
+            <TextView
+                android:id="@+id/characterLeftTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Characters left: 500"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+
+    <Button
+        android:id="@+id/projectSubmitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/app_btn_selector"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Submit"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/aviProgressBar"
+        style="@style/SpinKitView.RotatingPlane"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/appColor" />
+
+</RelativeLayout>
+</layout>

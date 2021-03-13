@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="physicalBinder"
+            type="com.dazzlerr_usa.views.fragments.profile.ProfilePojo.DataBean" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    android:id="@+id/physicalAppearanceLayout"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Physical Appearance"
+        android:textColor="@color/appColor"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height(Feet, Inch.)"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.height.equals(``)? `-`:physicalBinder.height}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.weight.equals(``)? `-`:physicalBinder.weight+` Kg`}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biceps"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/biceps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.biceps.equals(``)?`-`:physicalBinder.biceps}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chest/Bust"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/chest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.chest.equals(``)?`-`:physicalBinder.chest}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waist"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/waist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.waist.equals(``)?`-`:physicalBinder.waist}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hips"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/hips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.hips.equals(``)?`-`:physicalBinder.hips}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hair color"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/hairColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.hair_color.equals(``)?`-`:physicalBinder.hair_color}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hair Length"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/hairLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.hair_length.equals(``)?`-`:physicalBinder.hair_length}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hair Type"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/hairType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.hair_type.equals(``)?`-`:physicalBinder.hair_type}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skin Tone"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/skinTone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.skintone.equals(``)?`-`:physicalBinder.skintone}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eye color"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/eyeColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.eye_color.equals(``)?`-`:physicalBinder.eye_color}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dress"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/dress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.dress.equals(``)?`-`:physicalBinder.dress}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shoes"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/shoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.shoes.equals(``)?`-`:physicalBinder.shoes}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ethnicity"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/ethnicity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{physicalBinder.ethnicity}"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorLightGrey"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

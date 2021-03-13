@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dazzlerr_usa">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.dazzlerr_usa.utilities.MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:allowBackup"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.dazzlerr_usa.views.activities.calllogs.CallLogsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.dazzlerr_usa.views.activities.synchcalling.IncomingTransparentCallActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.synchcalling.IncomingCallScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.synchcalling.CallScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.registersuccess.RegisterSuccessActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.recommendedevents.RecommendedEventsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.recommendedjobs.RecommendedJobsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.portfolio.AudioPlayerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.portfolio.AddAudioActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.institutedetails.InstituteDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.institute.InstituteFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.institute.InstituteListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.dazzlerr_usa.utilities.MediaPreviewActivity" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.jobfilter.JobFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.membership.MemershipAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.eventcontact.EventContactActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.mymembership.MyMembershipActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.emailverification.IndividualEmailVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.setprimarydevice.SetPrimaryDeviceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.membership.MembershipCCEvenuePaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.emailverification.EmailVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.membership.MembershipActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.membership.MembershipSuccessActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.mobileverification.MobileVerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditProfileImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.events.activities.EventsFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.events.activities.PromoteEventActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.events.activities.AllOtherEventsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.events.activities.EventListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.notifications.OccasionalNotificationHandlerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.transactions.TransactionsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.blogs.activities.BlogsByTagsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.blogs.activities.AllOtherBlogsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.blogs.activities.SearchBlogsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.blogs.activities.AllCategoryBlogsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.blogs.activities.BlogDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.blogs.activities.BlogListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.becomefeatured.FeaturedCartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.becomefeatured.BecomeFeaturedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.featuredccavenue.WebviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.report.ProfileReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.UserInActiveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.featuredccavenue.AddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.featuredccavenue.StatusActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.talentviews.TalentViewsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.talentlikes.TalentLikesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.talentfollowers.TalentFollowersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.interestedtalents.InterestedTalentsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.castingfollowings.CastingFollowingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.profileteam.AddTeamMemberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditProductsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditEquipmentsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditTeamActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.profileteam.ProfileTeamActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.messages.MessagesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.videopreview.VideoPreviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditServicesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.shortlistedtalents.ShortListedTalentsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.changepassword.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.contactus.ContactUsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.accountverification.AccountVerification"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editcastingprofile.EditCastingProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.myJobs.MyJobsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.addjob.AddOrEditJobActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.weblinks.WebLinksActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.eventdetails.EventDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.events.activities.EventsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.influencerdetails.InfluencerDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.influencers.InfluencersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.elitecontact.EliteContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.elitememberdetails.EliteMemberDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.elitemembers.EliteMembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditRatesAndTravelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditAppearanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditGeneralInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.editprofile.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.portfolio.addvideo.AddVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.portfolio.addproject.PortfolioProjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/CropperTheme" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.contact.ProfileContactActivity"
+            android:screenOrientation="portrait" /> <!-- optional (needed if default theme has no action bar) -->
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.messagewindow.MessageWindowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.jobsdetails.JobsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.talentfilter.TalentFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.YoutubePlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize" />
+        <activity
+            android:name="com.dazzlerr_usa.utilities.imageslider.ImagePreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.location.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.settings.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.RatesAndTravelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.notifications.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.portfolio.PortfolioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.OthersProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.home.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dazzlerr_usa.views.activities.mainactivity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_dazzlerr" />
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/appColor" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dazzlerr_usa.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <service
+            android:name="com.dazzlerr_usa.utilities.firebasemessaging.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1005862545553988~7593995971" />
+
+        <service android:name="com.dazzlerr_usa.utilities.sinchcalling.SinchService" /> <!-- Incoming call -->
+        <service android:name="com.dazzlerr_usa.utilities.sinchcalling.HeadsUpNotificationService" />
+
+        <receiver
+            android:name="com.dazzlerr_usa.utilities.sinchcalling.CallNotificationActionReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="999">
+                <action android:name="ConstantApp.CALL_RECEIVE_ACTION" />
+                <action android:name="ConstantApp.CALL_CANCEL_ACTION" />
+                <action android:name="ConstantApp.DIALOG_CALL" />
+            </intent-filter>
+        </receiver> <!-- Outgoing call -->
+        <service android:name="com.dazzlerr_usa.utilities.sinchcalling.OngoingCallNotificationService" />
+
+        <receiver
+            android:name="com.dazzlerr_usa.utilities.sinchcalling.MyCallNotificationActionReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="999">
+                <action android:name="ConstantApp.MYCALL_CANCEL_ACTION" />
+                <action android:name="ConstantApp.DIALOG_MYCALL" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

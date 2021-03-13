@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="MessageBinder"
+            type="com.dazzlerr_usa.views.fragments.messages.MessagesListPojo.DataBean" />
+    </data>
+    <com.daimajia.swipe.SwipeLayout
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp"
+        swipe:drag_edge="right"
+        swipe:clickToClose="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#589107"
+            android:gravity="center_vertical"
+            android:tag="Bottom3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/ic_delete_black_24dp" />
+
+            <TextView
+                android:id="@+id/trashMessageTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Do you want to restore it?"
+                android:textColor="#fff"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                swipe:cardElevation="@dimen/_5sdp"
+                swipe:cardCornerRadius="0dp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                swipe:cardBackgroundColor="@color/colorWhite">
+
+            <Button
+                android:id="@+id/undoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@color/colorWhite"
+                android:text="Yes, move it"
+                android:textAllCaps="false"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="#589107" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:background="#ffffff"
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{MessageBinder.name}"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{MessageBinder.subject}"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textSize="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:set_formatted_text="@{MessageBinder.created_on}"
+                android:textColor="@color/colorLightGrey"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textSize="@dimen/_10sdp"
+                />
+        </LinearLayout>
+    </com.daimajia.swipe.SwipeLayout>
+</layout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.activities.editprofile.EditServicesActivity">
+
+    <include layout="@layout/simpletitlelayout"
+        android:id="@+id/titleLayout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/submitServicesBtn">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/servicesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_9sdp"
+        android:textColor="@color/appColor"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Not found your service above! Don't worry. You can add your own services from here."/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customServiceRecycler"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/edittext_border"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:backgroundTint="@color/selectorGrey">
+
+        <EditText
+            android:id="@+id/customServiceEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_3sdp"
+            android:textSize="@dimen/_10sdp"
+            android:inputType="textCapSentences"
+            android:hint="Enter your service here"/>
+
+        <Button
+            android:id="@+id/addServicesBtn"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+            android:background="@color/appColor"
+            android:textSize="@dimen/_10sdp"
+            android:text="Add"
+            android:textColor="@color/colorWhite"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+        <Button
+            android:id="@+id/submitServicesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:text="Submit"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/colorWhite"
+            android:background="@color/appColor"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+</layout>

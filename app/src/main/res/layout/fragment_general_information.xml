@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include
+        layout="@layout/titlelayout"
+        android:id="@+id/title_layout"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Languages known"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/appColor"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/selectorGrey"
+        android:layout_marginTop="@dimen/_5sdp"
+        >
+
+        <com.dazzlerr_usa.utilities.MultiSelectionSpinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DOB"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/appColor"/>
+
+    <TextView
+        android:id="@+id/generalInfoDateofbirth"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/selectorGrey"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp"
+        android:textSize="@dimen/_10sdp"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorBlack"
+        android:hint="Select your date of birth"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <RadioButton
+                android:id="@+id/generalInfoMaleRadiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Male   "
+                android:textSize="@dimen/_10sdp"
+                android:drawablePadding="0dp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+            <RadioButton
+                android:id="@+id/generalInfoFemaleRadiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agency signed ?"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <RadioButton
+                android:id="@+id/generalInfoYesRadiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Yes     "
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+
+            <RadioButton
+                android:id="@+id/generalInfoNoRadiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marital Status ?"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <RadioButton
+                android:id="@+id/generalInfoSingleRadiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Single "
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+            <RadioButton
+                android:id="@+id/generalInfoMarriedRadiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Married"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+            <RadioButton
+                android:id="@+id/generalInfoDivorcedRadiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Divorced"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience Level"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <RadioButton
+                android:id="@+id/generalInfoExp1Radiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Novice "
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+            <RadioButton
+                android:id="@+id/generalInfoExp2Radiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Experienced"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+
+            <RadioButton
+                android:id="@+id/generalInfoExp3Radiobtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Professional"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorLightGrey1"
+                android:buttonTint="@color/appColor"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available For"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/selectorGrey"
+            android:layout_marginTop="@dimen/_5sdp"
+            >
+
+            <com.dazzlerr_usa.utilities.MultiSelectionSpinner
+                android:id="@+id/generalInfoAvailableForSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/selectorGrey"
+            android:layout_marginTop="@dimen/_5sdp">
+
+
+            <Spinner
+                android:id="@+id/GeneralInfoState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/_10sdp"
+                android:singleLine="true"
+                android:visibility="visible"
+                android:gravity="center_vertical"/>
+        </FrameLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/appColor"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="@color/selectorGrey"
+                android:layout_marginTop="@dimen/_5sdp">
+
+
+
+                <Spinner
+                    android:id="@+id/GeneralInfoCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current State"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/appColor"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="@color/selectorGrey"
+                android:layout_marginTop="@dimen/_5sdp">
+
+
+
+                <Spinner
+                    android:id="@+id/GeneralInfoCurrentState"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:visibility="visible"
+                    android:gravity="center_vertical"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current City"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/appColor"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="@color/selectorGrey"
+                android:layout_marginTop="@dimen/_5sdp">
+
+
+                <Spinner
+                    android:id="@+id/GeneralInfoCurrentCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"/>
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/genralInfoAgencylayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agency/Brand Name"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/appColor"/>
+
+            <EditText
+                android:id="@+id/GenralInfoAgencyname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/edittext_border"
+                android:backgroundTint="@color/selectorGrey"
+                android:textSize="@dimen/_10sdp"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/_5sdp"
+                android:hint="Agency/Brand Name"/>
+        </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferred Location"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/appColor"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/selectorGrey"
+        android:layout_marginTop="@dimen/_5sdp"
+        >
+
+        <com.dazzlerr_usa.utilities.MultiSelectionSpinner
+            android:id="@+id/generalInfoLocationSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            />
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textAllCaps="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/appColor"/>
+
+    <EditText
+        android:id="@+id/generalInfoAboutEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:padding="@dimen/_5sdp"
+        android:gravity="start"
+        android:lines="10"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@color/selectorGrey"
+        android:textSize="@dimen/_10sdp"
+        android:maxLength="300"
+        android:hint="About"
+        />
+
+        <TextView
+            android:id="@+id/characterLeftTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Characters left: 300"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_3sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interested in"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/interestsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/selectorGrey">
+
+            <EditText
+                android:id="@+id/interestEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_10sdp"
+                android:inputType="textCapSentences"
+                android:hint="Enter your interest here"/>
+
+            <Button
+                android:id="@+id/addInterestsBtn"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="match_parent"
+                android:background="@color/appColor"
+                android:textSize="@dimen/_10sdp"
+                android:text="Add"
+                android:textColor="@color/colorWhite"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/skillsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/selectorGrey">
+
+            <EditText
+                android:id="@+id/skillsEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/_10sdp"
+                android:inputType="textCapSentences"
+                android:hint="Enter your skill here"/>
+
+            <Button
+                android:id="@+id/addSkiillsBtn"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="match_parent"
+                android:background="@color/appColor"
+                android:textSize="@dimen/_10sdp"
+                android:text="Add"
+                android:textColor="@color/colorWhite"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By signing up, you accept our terms of use."
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            android:textColor="@color/colorBlack"/>
+
+        <Button
+            android:id="@+id/generalInfoSubmitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:text="Submit"
+            android:textSize="@dimen/_10sdp"
+            android:background="@drawable/app_btn_selector"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>
+</layout>

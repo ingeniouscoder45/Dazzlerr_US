@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="bindingObj"
+            type="com.dazzlerr_usa.views.fragments.castingdashboard.CastingDashboardPojo.FeaturedTalentBean" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/modelPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:background="#e9e9e9"
+            app:modelImage="@{bindingObj.profile_pic}"
+            />
+
+        <ImageView
+            android:id="@+id/isFeaturedOrTopRated"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/ic_featured"
+            android:visibility="gone"
+            />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:gravity="center"
+    android:background="#B2FFFFFF"
+    android:padding="@dimen/_3sdp"
+    >
+    <TextView
+        android:id="@+id/modelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@{bindingObj.name}"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_13sdp"/>
+
+    <RatingBar
+        android:id="@+id/modelRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:rating="5"
+        android:backgroundTint="@color/appColor"
+        />
+
+    <TextView
+        android:id="@+id/modelExperienceLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@{bindingObj.exp_type+` `+(bindingObj.user_role.equals(``)? `` : String.valueOf(bindingObj.user_role.charAt(0)).toUpperCase()+ bindingObj.user_role.substring(1)) +` `+(bindingObj.secondary_role.equals(``)? `` : `| `+ String.valueOf(bindingObj.secondary_role.charAt(0)).toUpperCase()+ bindingObj.secondary_role.substring(1))}"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_9sdp"/>
+
+</LinearLayout>
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

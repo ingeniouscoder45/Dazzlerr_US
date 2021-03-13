@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="locationBinder"
+            type="com.dazzlerr_usa.views.activities.location.LocationPojo" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@drawable/edittextbottomborder">
+
+    <TextView
+        android:id="@+id/headerTxt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:gravity="center_vertical"
+        android:text="Other Cities"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:background="#f1f1f1"
+        />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Mohali"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textSize="@dimen/_13sdp"/>
+</LinearLayout>
+</layout>

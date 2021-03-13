@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".views.activities.about.AboutActivity">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/servicesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/edittextbottomborder"
+                            android:backgroundTint="@color/appColor"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:typeface="sans"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Services We Provide"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/servicesRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"/>
+
+                        <LinearLayout
+                            android:id="@+id/emptyLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/errorText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No services found!"
+                                android:textSize="@dimen/_11sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:textColor="@color/colorLightGrey"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</layout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleParentLayout">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/event_banner"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"/>
+
+<!--                    <ImageView
+                        android:id="@+id/backBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:visibility="visible"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@drawable/ic_back_white_32dp"
+                        app:layout_collapseMode="pin"/>
+
+                    <ImageView
+                        android:id="@+id/rightBtn"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_alignParentRight="true"
+                        android:visibility="visible"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_11sdp"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:src="@drawable/ic_search"
+                        app:layout_collapseMode="pin"/>-->
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:orientation="vertical"
+                tools:context=".views.activities.elitemembers.EliteMembersActivity">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/selectorGrey"
+                    android:layout_marginTop="@dimen/_3sdp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_8sdp">
+
+                    <TextView
+                    android:id="@+id/previousMonthTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Prev Month"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_chevron_left_black_24dp"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:id="@+id/currentMonthTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="September, 2019"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/nextMonthTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Next Month"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:gravity="end|center_vertical"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:textColor="@color/colorLightGrey"
+                        android:textSize="@dimen/_10sdp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/selectorGrey"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/eventsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/emptyLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:src="@drawable/ic_dazzlerr"
+                        app:tint="@color/colorLightGrey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No events found to explore!"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:textColor="@color/colorLightGrey"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/filterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/_15sdp"
+            app:fab_showAnimation="@android:anim/fade_in"
+            app:fab_hideAnimation="@android:anim/fade_out"
+            android:src="@drawable/ic_filter" />
+
+        <RelativeLayout
+            android:id="@+id/titleParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/simpletitlelayout"
+                android:id="@+id/titleLayout"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchCardView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardElevation="@dimen/_7sdp"
+                app:cardCornerRadius="0dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:theme="@style/AppSearchView"
+                        android:layout_height="wrap_content"
+                        app:defaultQueryHint="Search for events here..."
+                        app:iconifiedByDefault="false"
+                        android:layout_alignParentTop="true"
+                        android:inputType="textCapSentences"
+                        app:queryBackground="@android:color/transparent"
+                        android:clickable="true" />
+
+                    <ImageView
+                        android:id="@+id/searchBtn"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorWhite"
+                        android:src="@drawable/ic_search"
+                        android:padding="@dimen/_8sdp"
+                        app:tint="@color/colorBlack" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

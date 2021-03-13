@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="jobsBinder"
+            type="com.dazzlerr_usa.views.fragments.jobs.JobsPojo.DataBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/isJobFeaturedTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffc93a"
+            android:text="FEATURED"
+            android:textColor="@color/colorBlack"
+            android:paddingLeft="@dimen/_11sdp"
+            android:paddingRight="@dimen/_11sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:textSize="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_2sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/_5sdp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_gravity="start"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/appColor"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/appColor"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:text="@{jobsBinder.title.trim()}"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorBlack"
+                android:text="Job Code:"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{jobsBinder.job_uid}"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textStyle="bold"
+                android:hint="Not available"
+                android:textColor="#919191"
+                android:textSize="@dimen/_11sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorBlack"
+                android:text="Posted By:"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{jobsBinder.name.equals(``)?jobsBinder.casting_name:jobsBinder.name}"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textStyle="bold"
+                android:hint="Not available"
+                android:textColor="#919191"
+                android:textSize="@dimen/_11sdp"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/jobsForRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:background="@color/colorWhite"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:focusedByDefault="false"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_39sdp"
+        android:background="@drawable/dash_rextangle"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{jobsBinder.views}"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEWS"
+            android:textSize="@dimen/_8sdp"
+            android:textColor="@color/colorBlack"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/colorBlack"
+            android:text="Posted On:"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/jobDateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="#919191"
+            android:layout_marginLeft="@dimen/_3sdp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorBlack"
+                android:text="Location:"
+                android:layout_gravity="end"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{jobsBinder.city}"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_gravity="end"
+                android:textColor="#919191"
+                android:textSize="@dimen/_11sdp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+</layout>

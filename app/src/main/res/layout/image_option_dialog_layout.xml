@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Select Option"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:background="@color/appColor"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/captureImageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Capture Image"
+            android:gravity="center"
+            android:textColor="@color/appColor"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/edittextbottomborder"/>
+
+        <TextView
+            android:id="@+id/pickFromGalleryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Pick from gallery"
+            android:gravity="center"
+            android:textColor="@color/appColor"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/edittextbottomborder"/>
+
+        <TextView
+            android:id="@+id/dialogCancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:text="Cancel"
+            android:gravity="center"
+            android:textColor="@color/appColor"
+            android:textSize="@dimen/_12sdp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.fragments.profile.ProfileFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:id="@+id/SearchResultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@color/white"
+                android:text="Searched records for: "
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/appColor"
+                android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/SearchResultTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/white"
+            android:text=""
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:textSize="@dimen/_12sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center_vertical"/>
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/talentRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/filterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/_15sdp"
+            app:fab_showAnimation="@android:anim/fade_in"
+            app:fab_hideAnimation="@android:anim/fade_out"
+            android:src="@drawable/ic_filter"
+            />
+
+        <LinearLayout
+            android:id="@+id/emptyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:src="@drawable/ic_dazzlerr"
+                app:tint="@color/colorLightGrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No talents found to explore!"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:textColor="@color/colorLightGrey"/>
+            <Button
+                android:id="@+id/exploreBtn"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/app_btn_selector"
+                android:text="Try others"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchCardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardElevation="@dimen/_7sdp"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="0dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:theme="@style/AppSearchView"
+            android:layout_height="wrap_content"
+            app:defaultQueryHint="Search talents by name"
+            app:iconifiedByDefault="false"
+            android:layout_alignParentTop="true"
+            app:queryBackground="@android:color/transparent"
+            android:clickable="true" />
+
+                <ImageButton
+                    android:id="@+id/searchBtn"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/appColor"
+                    android:src="@drawable/ic_search"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

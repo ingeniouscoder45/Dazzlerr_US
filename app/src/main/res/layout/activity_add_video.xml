@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.activities.portfolio.addproject.PortfolioProjectActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/simpletitlelayout"
+                android:id="@+id/titleLayout"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Title"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <EditText
+                        android:id="@+id/videoTitleEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:textColor="@color/colorDarkGrey"
+                        android:background="@drawable/edittext_border"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:singleLine="true"
+                        android:maxLength="70"
+                        android:inputType="textCapSentences"
+                        android:hint="Enter your video title"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video URL"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <EditText
+                        android:id="@+id/videoUrlEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp"
+                        android:textColor="@color/colorDarkGrey"
+                        android:background="@drawable/edittext_border"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:singleLine="true"
+                        android:maxLength="255"
+                        android:hint="Paste your video url here"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Please follow the instructions to add a video link:"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="@dimen/_12sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_video_instruction"
+                        android:textSize="@dimen/_12sdp"
+                        android:lineSpacingMultiplier="1.4"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginTop="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:textColor="@color/appColor"/>
+
+                    <EditText
+                        android:id="@+id/videoDecriptionEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDarkGrey"
+                        android:background="@drawable/edittext_border"
+                        android:backgroundTint="@color/colorLightGrey"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
+                        android:lines="6"
+                        android:maxLength="300"
+                        android:gravity="start"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:hint="Enter your video description"/>
+
+                    <TextView
+                        android:id="@+id/characterLeftTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Characters left: 300"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp"
+                        android:layout_marginTop="@dimen/_3sdp"/>
+
+                    <Button
+                        android:id="@+id/videoSubmitBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/app_btn_selector"
+                        android:layout_marginTop="@dimen/_17sdp"
+                        android:text="Add Video"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/colorWhite"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+    </RelativeLayout>
+</layout>

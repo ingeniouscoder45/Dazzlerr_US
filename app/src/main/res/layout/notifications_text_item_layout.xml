@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/notificationProfileImage"
+            android:layout_width="@dimen/_47sdp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_gravity="start"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/white_circle"
+            android:backgroundTint="@color/selectorGrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/colorBlack"
+                android:text=""
+                />
+            <TextView
+                android:id="@+id/notificationMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/colorBlack"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:enabled="false"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/notificaionTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:singleLine="true"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/colorLightGrey"
+                android:text="1 hour ago"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

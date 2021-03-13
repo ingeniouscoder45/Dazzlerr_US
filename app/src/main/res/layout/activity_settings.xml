@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+<LinearLayout
+       android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".views.activities.settings.SettingsActivity">
+
+    <include
+        layout="@layout/titlelayout"
+        android:id="@+id/titleLayout"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f1f1f1">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:textColor="@color/colorBlack"
+            android:text="Your profile link"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorWhite"
+            android:visibility="visible"
+            app:cardElevation="@dimen/_2sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/profileLinkTxt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+
+                <TextView
+                    android:id="@+id/copyBtn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:text="Copy"
+                    android:background="@drawable/app_btn_selector"
+                    android:gravity="center"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/settingsUsernameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:textColor="@color/colorBlack"
+            android:text="Your username"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorWhite"
+            android:visibility="visible"
+            app:cardElevation="@dimen/_2sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical">
+
+<EditText
+    android:id="@+id/usernameEdittext"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/_30sdp"
+    android:layout_weight="1"
+    android:background="@drawable/edittext_border"
+    android:backgroundTint="@color/selectorGrey"
+    android:textSize="@dimen/_11sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:maxLength="50"
+    android:enabled="false"
+    android:textColor="@color/colorBlack"
+    android:digits="abcdefghijklmnopqrstuvwxyz1234567890"
+    android:paddingRight="@dimen/_5sdp"
+    android:hint="Enter your username"
+    android:paddingLeft="@dimen/_5sdp"
+    />
+
+                <TextView
+                    android:id="@+id/changeBtn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:text="Reset"
+                    android:background="@drawable/app_btn_selector"
+                    android:gravity="center"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone"
+        android:textColor="@color/colorBlack"
+        android:text="Location"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        android:visibility="gone"
+        app:cardElevation="@dimen/_2sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default Location: "
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13sdp"/>
+        <TextView
+            android:id="@+id/locationTxt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Delhi"
+            android:singleLine="true"
+            android:textColor="@color/appColor"
+            android:textSize="@dimen/_13sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <TextView
+            android:id="@+id/changeLocationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Change"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="#0c73cf"/>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="visible"
+        android:textColor="@color/colorBlack"
+        android:text="Notifications"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        android:layout_marginBottom="0.5dp"
+        app:cardElevation="@dimen/_3sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable/Disable Notifications "
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+           <Switch
+               android:id="@+id/notificationSwitch"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:checked="true"
+               android:trackTint="@color/appColor"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:textColor="@color/colorBlack"
+            android:text="Profile"/>
+
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        android:layout_marginBottom="0.5dp"
+        app:cardElevation="@dimen/_3sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hide your profile temporarily (Vacation mode) "
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+           <Switch
+               android:id="@+id/hideProfileSwitch"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:checked="true"
+               android:trackTint="@color/appColor"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible"
+                android:textColor="@color/colorBlack"
+                android:text="Privacy (prevent your profile/images from showing on search engines like Google, Bing etc.)"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                android:layout_marginBottom="0.5dp"
+                app:cardElevation="@dimen/_3sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Hide your profile from search engines"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp"/>
+
+
+                    <Switch
+                        android:id="@+id/hideProfileImagesSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:trackTint="@color/appColor"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/profileRoleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_13sdp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Set multiple roles"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    android:layout_marginBottom="0.5dp"
+                    app:cardElevation="@dimen/_3sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profileRoleRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+                    <TextView
+                        android:id="@+id/updateRolesBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update"
+                        android:background="@drawable/app_btn_selector"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_11sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_11sdp"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/colorWhite"/>
+
+                </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:textColor="@color/colorBlack"
+            android:text="Change Password"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorWhite"
+            android:visibility="visible"
+            app:cardElevation="@dimen/_2sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Change your password"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+
+                <TextView
+                    android:id="@+id/changePasswordBtn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="match_parent"
+                    android:text="Change"
+                    android:background="@drawable/app_btn_selector"
+                    android:gravity="center"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/securityQuestionTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible"
+            android:textColor="@color/colorBlack"
+            android:text="Security Question"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/securityQuestionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorWhite"
+            android:visibility="visible"
+            app:cardElevation="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/securityQuestionTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reset your security question"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_11sdp"
+                        android:paddingRight="@dimen/_3sdp"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:focusable="true"
+                        android:inputType="textCapSentences"
+                        android:focusableInTouchMode="true"/>
+
+                    <TextView
+                        android:id="@+id/viewAnswerBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(View Answer)"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:textColor="@color/appColor"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/setSecurityQuestionBtn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:text="Reset"
+                    android:background="@drawable/app_btn_selector"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/aviProgressBar"
+            style="@style/SpinKitView.RotatingPlane"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/appColor" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0048"
+    tools:context=".views.activities.notifications.OccasionalNotificationHandlerActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_bg_light"/>
+
+    <ImageView
+        android:id="@+id/occasionalImage"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/occasional_confetti"
+        android:layout_above="@+id/occasionalTitleTxt"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/occasionalTitleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_22sdp"
+        android:textColor="@color/colorWhite"
+        android:text="Dazzlerr wishing Happy Diwali to you and your family"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:textStyle="bold"/>
+
+    <com.dazzlerr_usa.utilities.imageslider.EmojiRainLayout
+        android:id="@+id/group_emoji_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rotation="180"
+        app:per="10"
+        app:duration="4200"
+        app:dropDuration="2400"
+        app:dropFrequency="500"
+        >
+
+    </com.dazzlerr_usa.utilities.imageslider.EmojiRainLayout>
+</RelativeLayout>
+
+</layout>

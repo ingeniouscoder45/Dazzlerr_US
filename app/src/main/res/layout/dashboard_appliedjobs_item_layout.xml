@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="binderObj"
+            type="com.dazzlerr_usa.views.fragments.talentdashboard.TalentDashboardPojo.AppliedJobsBean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_165sdp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_7sdp"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_20sdp">
+
+                            <View
+                                android:layout_width="@dimen/_3sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:background="@color/appColor"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{binderObj.user_role}"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/appColor"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{binderObj.title}"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_18sdp"
+                            android:maxLength="55"
+                            android:textSize="@dimen/_14sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@{`By `+binderObj.user_role}"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="@dimen/_18sdp"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/colorBlack"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="@dimen/_10sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_17sdp"
+                                    android:layout_height="@dimen/_17sdp"
+                                    android:src="@drawable/ic_calendar"
+                                    android:padding="@dimen/_3sdp"
+                                    app:tint="@color/colorLightGrey" />
+
+                                <TextView
+                                    android:id="@+id/featureJobDateTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorLightGrey"
+                                    android:layout_marginLeft="@dimen/_3sdp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <Button
+                android:id="@+id/viewDetailsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_23sdp"
+                android:text="View Details"
+                android:visibility="visible"
+                android:textSize="@dimen/_10sdp"
+                android:elevation="@dimen/_3sdp"
+                android:textColor="@color/colorWhite"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_50sdp"
+                android:background="@drawable/app_btn_selector"/>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

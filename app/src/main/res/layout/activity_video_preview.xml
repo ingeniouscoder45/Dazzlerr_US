@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/done_rel"
+        />
+
+    <LinearLayout
+        android:id="@+id/done_rel"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appColor"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_35sdp">
+
+
+        <Button
+            android:id="@+id/doneBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="Done"
+            android:textColor="#fff"
+            android:textSize="@dimen/_11sdp" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/appColor"
+            android:textSize="@dimen/_11sdp" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pd"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerInParent="true"
+        android:foregroundTint="@color/appColor"/>
+
+</RelativeLayout>
+</layout>

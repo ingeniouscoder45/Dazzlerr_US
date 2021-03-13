@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#39000000">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:gravity="center_vertical"
+                android:background="@drawable/app_color_gradient"
+                android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/remoteUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_20sdp"/>
+
+                    <TextView
+                        android:id="@+id/callState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Ringing"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_13sdp"
+                        />
+
+                    <Chronometer
+                        android:id="@+id/callDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_14sdp"/>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+
+            <ImageView
+                android:id="@+id/callerImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/selectorGrey"
+                android:padding="0dip"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true">
+
+                    <ImageView
+                        android:id="@+id/hangupButton"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:src="@drawable/ic_baseline_call_end_24"
+                        android:background="@drawable/appcolor_circle"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:background="@color/appColor"
+                        android:paddingBottom="@dimen/_15sdp">
+
+                        <ImageView
+                            android:id="@+id/speakerButton"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:padding="@dimen/_9sdp"
+                            android:src="@drawable/cast_ic_expanded_controller_mute"/>
+
+
+
+                        <ImageView
+                            android:id="@+id/muteUnmuteButton"
+                            android:layout_width="@dimen/_45sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:padding="@dimen/_9sdp"
+                            app:tint="@color/colorWhite"
+                            android:layout_marginLeft="@dimen/_110sdp"
+                            android:src="@drawable/ic_baseline_mic_off_24" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/aviProgressBar"
+        style="@style/SpinKitView.RotatingPlane"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/appColor" />
+
+</RelativeLayout>
+</layout>

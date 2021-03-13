@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_15sdp"
+    android:background="@drawable/edittext_borderwhitebackground2"
+    >
+<ImageView
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:layout_gravity="center_horizontal"
+    android:scaleType="fitXY"
+    android:src="@drawable/ic_error_black_24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/appColor"
+        android:text="Complete your profile"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/selectorGrey"
+        android:layout_marginTop="@dimen/_15sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Your Profile"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/progressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/appColor"
+                android:text="56%"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_12sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8sdp"
+            android:progress="56"
+            android:visibility="visible"
+            android:max="100"
+            android:progressDrawable="@drawable/progressbar_drawable"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialogAlertTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_11sdp"
+        android:lineSpacingMultiplier="1.2"
+        android:textAlignment="textStart"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <Button
+        android:id="@+id/dialogPositiveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/app_btn_selector"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Complete now"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_11sdp"/>
+
+    <TextView
+        android:id="@+id/dialogNegativeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I'll complete it later"
+        android:textColor="@color/colorLightGrey1"
+        android:textSize="@dimen/_11sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_5sdp"/>
+</LinearLayout>

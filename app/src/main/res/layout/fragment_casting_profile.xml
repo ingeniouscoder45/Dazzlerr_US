@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="profileBinder"
+            type="com.dazzlerr_usa.views.fragments.castingprofile.pojo.CastingProfilePojo.DataBean" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/profileMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/colorWhite">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                tools:context=".views.fragments.profile.ProfileFragment">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_350sdp">
+
+                    <ImageView
+                        android:id="@+id/profileBannerImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/casting_background"
+                        android:scaleType="fitXY"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#88000000"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/_130sdp"
+                                android:layout_height="@dimen/_165sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_35sdp">
+
+                                <RelativeLayout
+                                    android:layout_width="@dimen/_110sdp"
+                                    android:layout_height="@dimen/_155sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_alignParentBottom = "true"
+                                    android:background="@drawable/edittext_border"
+                                    android:backgroundTint="@color/colorWhite"
+                                    android:padding="@dimen/_2sdp">
+
+                                    <ImageView
+                                        android:id="@+id/userImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="#e9e9e9"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitXY"/>
+
+                                    <ImageView
+                                        android:id="@+id/isFeaturedOrTopRated"
+                                        android:layout_width="@dimen/_55sdp"
+                                        android:layout_height="@dimen/_55sdp"
+                                        android:src="@drawable/ic_featured"
+                                        android:visibility="gone"
+                                        />
+
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:id="@+id/editProfilePicBtn"
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="@dimen/_28sdp"
+                                    android:src="@drawable/ic_photo_camera"
+                                    android:padding="@dimen/_6sdp"
+                                    android:background="@drawable/appcolor_circle"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"/>
+
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/userName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{profileBinder.name.trim()}"
+                                android:textColorHint="@color/colorWhite"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:textSize="@dimen/_14sdp"
+                                android:singleLine="true"
+                                android:gravity="center"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/userDesignation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{profileBinder.representer}"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="/"
+                                    android:visibility="@{profileBinder.company_name.equals(``) ? View.GONE : View.VISIBLE}"
+                                    android:textColor="@color/colorWhite"
+                                    android:layout_marginLeft="@dimen/_2sdp"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/userRole"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{profileBinder.company_name}"
+                                    android:textColor="@color/colorWhite"
+                                    android:layout_marginLeft="@dimen/_2sdp"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="-5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_11sdp"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_location"
+                                    app:tint="@color/colorWhite" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_2sdp">
+
+
+                                    <TextView
+                                        android:id="@+id/userLocation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@{profileBinder.city}"
+                                        android:textColor="@color/colorWhite"
+                                        android:textColorHint="@color/colorWhite"
+                                        android:singleLine="true"
+                                        android:textSize="@dimen/_10sdp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/userstate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@{profileBinder.state_name}"
+                                        android:textColor="@color/colorWhite"
+                                        android:textColorHint="@color/colorWhite"
+                                        android:textSize="@dimen/_10sdp"
+                                        android:layout_marginLeft="@dimen/_2sdp"
+                                        android:singleLine="true"
+                                        />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/editProfileLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_round_border"
+                                android:paddingLeft="@dimen/_12sdp"
+                                android:paddingRight="@dimen/_12sdp"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:visibility="visible"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_3sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_10sdp"
+                                    android:src="@drawable/ic_edit"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Edit Profile"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:textSize="@dimen/_11sdp"
+                                    android:textColor="@color/colorWhite"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/likeFollowLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/followBtn"
+                                    android:layout_width="@dimen/_85sdp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_round_border"
+                                    android:paddingLeft="@dimen/_10sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_3sdp"
+                                    android:gravity="center"
+                                    android:layout_marginRight="@dimen/_5sdp"
+                                    android:paddingBottom="@dimen/_3sdp"
+                                    >
+
+                                    <ImageView
+                                        android:id="@+id/followIcon"
+                                        android:layout_width="@dimen/_10sdp"
+                                        android:layout_height="@dimen/_10sdp"
+                                        android:src="@drawable/ic_add"/>
+
+                                    <TextView
+                                        android:id="@+id/followBtnTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Follow"
+                                        android:layout_marginRight="@dimen/_8sdp"
+                                        android:layout_marginLeft="@dimen/_4sdp"
+                                        android:textSize="@dimen/_11sdp"
+                                        android:textColor="@color/colorWhite"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/likeBtn"
+                                    android:layout_width="@dimen/_85sdp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_round_border"
+                                    android:paddingLeft="@dimen/_10sdp"
+                                    android:paddingRight="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_3sdp"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_3sdp">
+
+                                    <ImageView
+                                        android:id="@+id/likeBtnIcon"
+                                        android:layout_width="@dimen/_11sdp"
+                                        android:layout_height="@dimen/_10sdp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_like_deselected"
+                                        app:tint="@color/colorWhite" />
+
+                                    <TextView
+                                        android:id="@+id/likeBtnTxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Like"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="@dimen/_11sdp"/>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_45sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:src="@drawable/ic_like_selected"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:tint="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="@{profileBinder.likes_count}"
+                            android:layout_gravity="center"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_followers"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            app:tint="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="@{profileBinder.followers_count}"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_55sdp"
+                        android:background="#7E000000"
+                        android:visibility="visible"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:id="@+id/castingActiveJobsBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_14sdp"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"
+                                android:hint="0"
+                                android:textColorHint="@color/colorWhite"
+                                android:text="@{profileBinder.active_jobs}"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/colorWhite"
+                                android:text="Active Jobs"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/castingCompletedJobsBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_14sdp"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"
+                                android:hint="0"
+                                android:textColorHint="@color/colorWhite"
+                                android:text="@{profileBinder.completed_jobs}"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/colorWhite"
+                                android:text="Completed Jobs"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/castingViewsBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/userViews"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_14sdp"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"
+                                android:hint="0"
+                                android:textColorHint="@color/colorWhite"
+                                android:text="@{profileBinder.views}"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/colorWhite"
+                                android:text="Profile Views"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileContactLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:visibility="gone"
+                    android:background="@color/appColor">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/profileContactBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/_19sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:padding="@dimen/_1sdp"
+                            android:src="@drawable/ic_get_contact"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Info."
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorWhite"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/profileMessagesBtn"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:scaleType="fitXY"
+                            android:padding="@dimen/_1sdp"
+                            android:src="@drawable/ic_envelope" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chat Now"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorWhite"/>
+
+                    <LinearLayout
+                        android:id="@+id/profileReportBtn"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:padding="@dimen/_1sdp"
+                            android:background="@drawable/ic_report"
+                            app:tint="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:orientation="vertical"
+            app:layout_collapseMode="pin">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/castingDashActiveJobsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_120sdp"
+                            android:background="@drawable/red_banner_background"
+                            android:paddingTop="@dimen/_20sdp"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_10sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Active jobs"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_13sdp"/>
+
+
+
+                            <Button
+                                android:id="@+id/castingDashviewActiveJobsBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_20sdp"
+                                android:background="@drawable/app_white_selector"
+                                android:text="View All"
+                                android:elevation="@dimen/_5sdp"
+                                android:textSize="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"/>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/activeJobsRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_50sdp"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/projectsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Previous Projects"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_13sdp"
+                                android:textColor="@color/appColor"/>
+
+                            <TextView
+                                android:id="@+id/addNewProjectBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add New"
+                                android:drawablePadding="@dimen/_2sdp"
+                                android:drawableLeft="@drawable/fab_add"
+                                android:drawableTint="@color/colorLightGrey"
+                                android:textSize="@dimen/_11sdp"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorLightGrey"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="@color/appColor"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/projectsRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+                        <LinearLayout
+                            android:id="@+id/emptyLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:src="@drawable/ic_report_problem_black_24dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/errorText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No projects found!!"
+                                android:textSize="@dimen/_11sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:textColor="@color/colorLightGrey"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

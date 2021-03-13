@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="proposalsBinder"
+            type="com.dazzlerr_usa.views.activities.jobsdetails.GetProposalsPojo.DataBean" />
+    </data>
+
+<LinearLayout
+    android:id="@+id/proposalsMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_8sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_8sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:text="@{proposalsBinder.name}"/>
+
+            <TextView
+                android:id="@+id/proposalDateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/colorDarkGrey"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/purposalUserroleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/appColor"
+            android:text="@{proposalsBinder.user_role}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:singleLine="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="@{proposalsBinder.msg}"/>
+
+    </LinearLayout>
+</LinearLayout>
+</layout>
